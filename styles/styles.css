@@ -1,0 +1,183 @@
+@font-face {
+  font-family: 'Gilroy Semibold';
+  src: url("../fonts/Gilroy-SemiBold.eot");
+  src: url("../fonts/Gilroy-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-SemiBold.woff") format("woff"), url("../fonts/Gilroy-SemiBold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Gilroy Regular';
+  src: url("../fonts/Gilroy-Regular.eot");
+  src: url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Gilroy Medium';
+  src: url("../fonts/Gilroy-Medium.eot");
+  src: url("../fonts/Gilroy-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("truetype"); }
+body {
+  font-family: "Gilroy Regular";
+  box-sizing: border-box;
+  background-color: #f6f6f6; }
+
+ul, h1, h2, body, p {
+  padding: 0;
+  margin: 0; }
+
+.fz16 {
+  font-size: 16px; }
+
+.fz20 {
+  font-size: 20px; }
+
+.fz24 {
+  font-size: 24px; }
+
+.fz72 {
+  font-size: 72px; }
+
+.col-gray-2 {
+  color: #242424; }
+
+.col-gray-4 {
+  color: #6B6B6B; }
+
+.col-orange {
+  color: #C78100; }
+
+.container {
+  position: relative;
+  max-width: 1150px;
+  margin: auto; }
+
+.main-header {
+  height: 830px; }
+  .main-header .container {
+    height: inherit; }
+
+.header-bg-dog {
+  z-index: -2;
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 718px;
+  max-height: 713px;
+  min-width: 225px;
+  min-width: 357px;
+  background: transparent url("../img/dog.png") no-repeat;
+  background-size: cover; }
+
+.header-bg-cat {
+  position: absolute;
+  bottom: -15%;
+  right: 15%;
+  width: 100%;
+  height: 100%;
+  max-width: 483px;
+  min-width: 165px;
+  max-height: 469px;
+  min-height: 157px;
+  background: transparent url("../img/cat 1.png") no-repeat;
+  background-size: cover; }
+
+.header-bg-text {
+  z-index: -1;
+  top: 70%;
+  left: -9.5%;
+  position: absolute;
+  color: #fff;
+  opacity: 0.5;
+  user-select: none;
+  font-family: "Gilroy Semibold";
+  font-size: 150px;
+  line-height: 130px; }
+  .header-bg-text .bg-text-1 {
+    font-size: 200px; }
+    .header-bg-text .bg-text-1 span {
+      font-size: 150px; }
+  .header-bg-text .bg-text-2 {
+    margin-left: 50%; }
+
+.main-nav {
+  padding-top: 33px;
+  font-family: "Gilroy Semibold";
+  margin-bottom: 68px; }
+  .main-nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .main-nav ul li {
+      list-style: none;
+      padding-left: 30px; }
+      .main-nav ul li:first-child {
+        padding-left: 0; }
+      .main-nav ul li a {
+        text-decoration: none; }
+    .main-nav ul div.nav-header {
+      display: flex;
+      align-items: center; }
+
+.header-main-text header h1 {
+  font-family: "Gilroy Semibold";
+  text-transform: uppercase;
+  line-height: 87px; }
+.header-main-text header p {
+  line-height: 18px; }
+.header-main-text p.header-our-aim {
+  font-family: "Gilroy Medium";
+  max-width: 659px;
+  margin-top: 12px; }
+
+.header-shelter-info .info-text {
+  margin-top: 43px;
+  max-width: 428px;
+  margin-bottom: 45px;
+  font-family: "Gilroy Medium"; }
+.header-shelter-info .to-help {
+  position: relative;
+  font-family: "Gilroy Medium";
+  text-decoration: none;
+  line-height: 40px;
+  padding: 2px 30px;
+  background: linear-gradient(180deg, #FFECB5 0%, #FFE69F 0.01%, #FFD45A 100%);
+  box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.25);
+  border-radius: 58px;
+  background-clip: padding-box;
+  border: solid 5px transparent; }
+  .header-shelter-info .to-help:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -5px;
+    border-radius: inherit;
+    background: linear-gradient(180deg, #FFDE89 0%, #FFCB38 100%);
+    box-shadow: 7px 7px 16px #E3E3E3, -3px -4px 8px rgba(255, 255, 255, 0.9), inset 13px 22px 8px rgba(0, 0, 0, 0.02);
+    border: solid 1px #e6d6aa; }
+
+.about-shelter {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding-top: 55px;
+  padding-bottom: 75px; }
+  .about-shelter .left-box-animals {
+    position: relative;
+    width: 853px;
+    height: 521px;
+    background-color: #FAC832;
+    border-top-right-radius: 270px;
+    border-bottom-right-radius: 270px; }
+    .about-shelter .left-box-animals .dog-in-circle {
+      top: 5%;
+      right: 5%;
+      position: absolute;
+      background-color: #fff;
+      width: 464px;
+      height: 464px;
+      border-radius: 100%; }
+  .about-shelter .shelter-text {
+    max-width: 466px;
+    margin-left: 75px; }
+
+/*# sourceMappingURL=styles.css.map */
