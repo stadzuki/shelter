@@ -32,7 +32,7 @@ body {
     background-color: #f6f6f6;
 }
 
-ul, h1, h2, body, p {
+ul, h1, h2, h3, body, p {
     padding: 0;
     margin: 0;
 }
@@ -41,13 +41,19 @@ ul, h1, h2, body, p {
 
 .fz20 {font-size: 20px;}
 
+.fz22 {font-size: 22px;}
+
 .fz24 {font-size: 24px;}
+
+.fz28 {font-size: 28px;}
 
 .fz72 {font-size: 72px;}
 
 .col-gray-2 {color: #242424;}
 
 .col-gray-4 {color: #6B6B6B;}
+
+.col-gray-3 {color: #474747}
 
 .col-orange {color: #C78100;}
 
@@ -204,11 +210,11 @@ ul, h1, h2, body, p {
     display: flex;
     align-items: center;
     padding-top: 55px;
-    padding-bottom: 75px;
+    padding-bottom: 95px;
 
     .left-box-animals {
         position: relative;
-        width: 853px;
+        width: 50%;
         height: 521px;
         background-color: #FAC832;
         border-top-right-radius: 270px;
@@ -218,15 +224,196 @@ ul, h1, h2, body, p {
             top: 5%;
             right: 5%;
             position: absolute;
-            background-color: #fff;
+            background: #242424 url('../img/dog-in-circle.png');
             width: 464px;
             height: 464px;
             border-radius: 100%;
+        }
+
+        .cat-in-circle {
+            position: absolute;
+            width: 228px;
+            height: 228px;
+            background: #242424 url('../img/cat-in-circle.png');
+            border: solid 7px #ebbf3a;
+            border-radius: 100%;
+            right: -5%;
+            bottom: -5%;
         }
     }
 
     .shelter-text {
         max-width: 466px;
         margin-left: 75px;
+
+        h2 {
+            margin-bottom: 28px;
+        }
+
+        p{margin-bottom: 20px;}
+    }
+}
+
+.how-to-help {
+
+    .how-to-help-title {
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        font-family: $font-regular;
+        font-weight: 300;
+    }
+
+    .help-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 80px;
+
+        .help-item {
+            max-width: 166px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+
+            .icon-support { background: transparent url('../img/i-support.png') no-repeat center; }
+            .icon-money-help { background: transparent url('../img/i-money-help.png') no-repeat center; }
+            .icon-medicine { background: transparent url('../img/i-medicine.png') no-repeat center; }
+            .icon-to-hospital { background: transparent url('../img/i-to-hospital.png') no-repeat center; }
+            .icon-care { background: transparent url('../img/i-care.png') no-repeat center; }
+
+            .help-icon {
+                background-color: transparent;
+                width: 150px;
+                height: 150px;
+                border-radius: 100%;
+                border: solid 2px #ffc41e;
+            }
+
+            .help-description {
+                margin-top: 25px;
+                text-align: center;
+            }
+        }
+        
+    }
+}
+
+.care-of-animals {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+        
+
+    .pet-icon {
+        position: relative;
+        background: url('../img/dog-home.png') no-repeat center center  ;
+        background-size: contain;
+        // min-width: 53px;
+        // min-height: 51px;
+        // max-width: 148px;
+        // max-height: 144px;
+        width: 100%;
+        height: 144px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 35%;
+            left: 0;
+            top: 50%;
+            background-color: #eebf3a;
+            height: 1px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 35%;
+            right: 0;
+            top: 50%;
+            background-color: #eebf3a;
+            height: 1px;
+        }
+    }
+
+    .care-text {
+        margin: 70px 0;
+        display: flex;
+        justify-content: space-evenly;
+         
+        article {
+            max-width: 390px;
+
+            header {
+                margin-bottom: 20px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .our-animals {
+        .our-animals-title {
+            font-weight: normal;
+            text-align: center;
+        }
+    }
+
+    .animals-slider {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .animals-slide {
+            display: flex;
+            flex-direction: column;
+            // justify-content: space-between;
+            // align-items: center;
+            padding: 20px 0;
+
+            max-width: 368px;
+            max-height: 695px;
+            width: 368px;
+            height: 695px;
+            background-color: #FFFFFF;
+            border: 1px solid #D6D6D6;
+            border-radius: 5px;
+
+            .slide-header {
+                position: relative;
+                font-family: $font-medium;
+                font-weight: 500;
+                text-align: center;
+                
+                .pet-name {
+                    margin-top: 10px;
+
+                    &::after {
+                        content: '';
+                        width: 90%;
+                        height: 1px;
+                        bottom: -10px;
+                        left: 5%;
+                        background-color: #D6D6D6;
+                        position: absolute;
+                    }
+                }
+            }
+            
+            .slide-about-pet {
+                margin: 30px 15px;
+                // text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .pet-skill {
+                    padding: 6px 0px 40px;
+                }
+            }
+        }
     }
 }
