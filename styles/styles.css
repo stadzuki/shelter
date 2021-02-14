@@ -19,6 +19,135 @@ ul, h1, h2, h3, body, p {
   padding: 0;
   margin: 0; }
 
+.left-box-animals {
+  position: relative;
+  width: 50%;
+  height: 521px;
+  background-color: #FAC832;
+  border-top-right-radius: 270px;
+  border-bottom-right-radius: 270px; }
+  .left-box-animals .dog-in-circle {
+    top: 5%;
+    right: 5%;
+    position: absolute;
+    width: 464px;
+    height: 464px;
+    border-radius: 100%; }
+
+.content-link {
+  color: #AD7F00;
+  font-weight: 500;
+  font-family: "Gilroy Medium";
+  font-size: 20px; }
+
+.slide-overlay {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 368px;
+  height: inherit;
+  position: absolute;
+  display: block;
+  z-index: 2; }
+
+.article-set {
+  max-width: 680px;
+  margin-top: 45px;
+  line-height: 23px;
+  font-family: "Gilroy Regular";
+  font-weight: normal; }
+  .article-set header {
+    margin-bottom: 25px; }
+    .article-set header h3 {
+      font-family: "Gilroy Medium";
+      font-weight: 600; }
+  .article-set footer {
+    margin-top: 30px; }
+
+.block-icons {
+  position: relative;
+  width: 100%; }
+  .block-icons::before {
+    content: '';
+    position: absolute;
+    width: 35%;
+    left: 0;
+    top: 50%;
+    background-color: #eebf3a;
+    height: 1px; }
+  .block-icons::after {
+    content: '';
+    position: absolute;
+    width: 35%;
+    right: 0;
+    top: 50%;
+    background-color: #eebf3a;
+    height: 1px; }
+
+.settings-block {
+  padding-bottom: 50px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+
+.to-help {
+  font-size: 20px;
+  color: #242424;
+  position: relative;
+  font-family: "Gilroy Medium";
+  text-decoration: none;
+  line-height: 40px;
+  padding: 2px 30px;
+  background: linear-gradient(180deg, #FFECB5 0%, #FFE69F 0.01%, #FFD45A 100%);
+  box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.25);
+  border-radius: 58px;
+  background-clip: padding-box;
+  border: solid 5px transparent; }
+  .to-help:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -5px;
+    border-radius: inherit;
+    background: linear-gradient(180deg, #FFDE89 0%, #FFCB38 100%);
+    box-shadow: 7px 7px 16px #E3E3E3, -3px -4px 8px rgba(255, 255, 255, 0.9), inset 13px 22px 8px rgba(0, 0, 0, 0.02);
+    border: solid 1px #e6d6aa; }
+
+.gray-btn {
+  position: relative;
+  font-family: "Gilroy Medium";
+  text-decoration: none;
+  line-height: 40px;
+  padding: 2px 30px;
+  background: linear-gradient(180deg, #FBFBFB 0%, #F6F6F6 100%);
+  box-shadow: 3px 3px 13px rgba(128, 128, 128, 0.25);
+  border-radius: 58px;
+  background-clip: padding-box;
+  border: solid 5px transparent; }
+  .gray-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -5px;
+    border-radius: inherit;
+    background: #F6F6F6;
+    box-shadow: 7px 7px 16px #E3E3E3, -4px -4px 8px rgba(255, 255, 255, 0.7), inset 13px 22px 8px rgba(0, 0, 0, 0.02);
+    border: solid 1px #f0f0f0; }
+
+.fz14 {
+  font-size: 14px; }
+
+.fz18 {
+  font-size: 18px; }
+
 .fz16 {
   font-size: 16px; }
 
@@ -48,6 +177,13 @@ ul, h1, h2, h3, body, p {
 
 .col-orange {
   color: #C78100; }
+
+strong {
+  font-weight: 700;
+  font-family: "Gilroy Medium"; }
+
+li {
+  list-style-position: inside; }
 
 .container {
   position: relative;
@@ -88,7 +224,7 @@ ul, h1, h2, h3, body, p {
 
 .header-bg-text {
   z-index: -1;
-  top: 70%;
+  top: 50%;
   left: -9.5%;
   position: absolute;
   color: #fff;
@@ -98,11 +234,14 @@ ul, h1, h2, h3, body, p {
   font-size: 150px;
   line-height: 130px; }
   .header-bg-text .bg-text-1 {
-    font-size: 200px; }
+    font-size: 200px;
+    text-align: center; }
     .header-bg-text .bg-text-1 span {
-      font-size: 150px; }
+      font-size: 115px; }
   .header-bg-text .bg-text-2 {
-    margin-left: 50%; }
+    position: absolute;
+    margin-left: 46%;
+    bottom: -26%; }
 
 .main-nav {
   padding-top: 33px;
@@ -139,30 +278,6 @@ ul, h1, h2, h3, body, p {
   max-width: 428px;
   margin-bottom: 45px;
   font-family: "Gilroy Medium"; }
-.header-shelter-info .to-help {
-  position: relative;
-  font-family: "Gilroy Medium";
-  text-decoration: none;
-  line-height: 40px;
-  padding: 2px 30px;
-  background: linear-gradient(180deg, #FFECB5 0%, #FFE69F 0.01%, #FFD45A 100%);
-  box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.25);
-  border-radius: 58px;
-  background-clip: padding-box;
-  border: solid 5px transparent; }
-  .header-shelter-info .to-help:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -5px;
-    border-radius: inherit;
-    background: linear-gradient(180deg, #FFDE89 0%, #FFCB38 100%);
-    box-shadow: 7px 7px 16px #E3E3E3, -3px -4px 8px rgba(255, 255, 255, 0.9), inset 13px 22px 8px rgba(0, 0, 0, 0.02);
-    border: solid 1px #e6d6aa; }
 
 .about-shelter {
   background-color: #fff;
@@ -170,30 +285,17 @@ ul, h1, h2, h3, body, p {
   align-items: center;
   padding-top: 55px;
   padding-bottom: 95px; }
-  .about-shelter .left-box-animals {
-    position: relative;
-    width: 50%;
-    height: 521px;
-    background-color: #FAC832;
-    border-top-right-radius: 270px;
-    border-bottom-right-radius: 270px; }
-    .about-shelter .left-box-animals .dog-in-circle {
-      top: 5%;
-      right: 5%;
-      position: absolute;
-      background: #242424 url("../img/dog-in-circle.png");
-      width: 464px;
-      height: 464px;
-      border-radius: 100%; }
-    .about-shelter .left-box-animals .cat-in-circle {
-      position: absolute;
-      width: 228px;
-      height: 228px;
-      background: #242424 url("../img/cat-in-circle.png");
-      border: solid 7px #ebbf3a;
-      border-radius: 100%;
-      right: -5%;
-      bottom: -5%; }
+  .about-shelter .dog-in-circle {
+    background: url("../img/dog-in-circle.png"); }
+  .about-shelter .cat-in-circle {
+    position: absolute;
+    width: 228px;
+    height: 228px;
+    background: #242424 url("../img/cat-in-circle.png");
+    border: solid 7px #ebbf3a;
+    border-radius: 100%;
+    right: -5%;
+    bottom: -5%; }
   .about-shelter .shelter-text {
     max-width: 466px;
     margin-left: 75px; }
@@ -220,21 +322,25 @@ ul, h1, h2, h3, body, p {
     align-items: center;
     flex-direction: column; }
     .how-to-help .help-list .help-item .icon-support {
-      background: transparent url("../img/i-support.png") no-repeat center; }
+      background: transparent url("../img/i-support.svg") no-repeat center; }
     .how-to-help .help-list .help-item .icon-money-help {
-      background: transparent url("../img/i-money-help.png") no-repeat center; }
+      background: transparent url("../img/i-money-help.svg") no-repeat center; }
     .how-to-help .help-list .help-item .icon-medicine {
-      background: transparent url("../img/i-medicine.png") no-repeat center; }
+      background: transparent url("../img/i-medicine.svg") no-repeat center; }
     .how-to-help .help-list .help-item .icon-to-hospital {
-      background: transparent url("../img/i-to-hospital.png") no-repeat center; }
+      background: transparent url("../img/i-to-hospital.svg") no-repeat center; }
     .how-to-help .help-list .help-item .icon-care {
-      background: transparent url("../img/i-care.png") no-repeat center; }
+      background: transparent url("../img/i-care.svg") no-repeat center; }
+    .how-to-help .help-list .help-item svg {
+      width: 80px; }
     .how-to-help .help-list .help-item .help-icon {
       background-color: transparent;
       width: 150px;
       height: 150px;
       border-radius: 100%;
-      border: solid 2px #ffc41e; }
+      background-color: #f6f6f6;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 6px 6px 16px rgba(224, 224, 224, 0.6), -6px -6px 16px rgba(255, 255, 255, 0.77); }
     .how-to-help .help-list .help-item .help-description {
       margin-top: 25px;
       text-align: center; }
@@ -244,28 +350,12 @@ ul, h1, h2, h3, body, p {
   justify-content: center;
   align-items: center;
   flex-direction: column; }
+  .care-of-animals .container {
+    max-width: 1500px; }
   .care-of-animals .pet-icon {
-    position: relative;
-    background: url("../img/dog-home.png") no-repeat center center;
+    background: url("../img/i-support.svg") no-repeat center center;
     background-size: contain;
-    width: 100%;
     height: 144px; }
-    .care-of-animals .pet-icon::before {
-      content: '';
-      position: absolute;
-      width: 35%;
-      left: 0;
-      top: 50%;
-      background-color: #eebf3a;
-      height: 1px; }
-    .care-of-animals .pet-icon::after {
-      content: '';
-      position: absolute;
-      width: 35%;
-      right: 0;
-      top: 50%;
-      background-color: #eebf3a;
-      height: 1px; }
   .care-of-animals .care-text {
     margin: 70px 0;
     display: flex;
@@ -275,23 +365,26 @@ ul, h1, h2, h3, body, p {
       .care-of-animals .care-text article header {
         margin-bottom: 20px;
         font-weight: 600; }
-  .care-of-animals .our-animals .our-animals-title {
+  .care-of-animals .our-animals .our-animals-text {
     font-weight: normal;
     text-align: center; }
+    .care-of-animals .our-animals .our-animals-text .our-animals-title {
+      margin-bottom: 25px;
+      font-weight: normal; }
   .care-of-animals .animals-slider {
-    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center; }
     .care-of-animals .animals-slider .animals-slide {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      margin-right: 20px;
+      margin-top: 20px;
       padding: 20px 0;
-      max-width: 368px;
-      max-height: 695px;
       width: 368px;
-      height: 695px;
+      height: 555px;
       background-color: #FFFFFF;
       border: 1px solid #D6D6D6;
       border-radius: 5px; }
@@ -311,11 +404,122 @@ ul, h1, h2, h3, body, p {
             background-color: #D6D6D6;
             position: absolute; }
       .care-of-animals .animals-slider .animals-slide .slide-about-pet {
-        margin: 30px 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; }
-        .care-of-animals .animals-slider .animals-slide .slide-about-pet .pet-skill {
-          padding: 6px 0px 40px; }
+        font-family: "Gilroy Regular";
+        margin: 0 15px;
+        font-weight: 500; }
+      .care-of-animals .animals-slider .animals-slide .more-info {
+        margin-left: 15px; }
+  .care-of-animals .slider-controll {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .care-of-animals .slider-controll .slider-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 25px; }
+      .care-of-animals .slider-controll .slider-buttons #take-on-time {
+        margin-top: 20px;
+        padding: 0 30px; }
+    .care-of-animals .slider-controll .slider-arrow {
+      position: absolute; }
+    .care-of-animals .slider-controll .slider-left-arrow {
+      left: 15%; }
+    .care-of-animals .slider-controll .slider-right-arrow {
+      right: 15%; }
+  .care-of-animals .care-footer {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .care-of-animals .care-footer p {
+      max-width: 583px; }
+    .care-of-animals .care-footer .care-socials {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .care-of-animals .care-footer .care-socials li {
+        list-style: none; }
+
+.financial-support {
+  background-color: #ffffff; }
+  .financial-support .finance-icon {
+    background: url("../img/i-money-help.svg") no-repeat center center;
+    background-size: contain;
+    height: 93px; }
+  .financial-support .finance-title {
+    text-align: center;
+    margin-top: 60px;
+    max-width: 758px; }
+    .financial-support .finance-title h2 {
+      font-weight: 600;
+      padding-bottom: 25px; }
+  .financial-support .finance-text {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .financial-support .finance-text p {
+      margin-bottom: 10px; }
+    .financial-support .finance-text .finance-text-title {
+      font-weight: normal;
+      margin-bottom: 25px;
+      line-height: 22px;
+      font-weight: 400;
+      font-family: "Gilroy Regular";
+      font-family: "Gilroy Regular"; }
+    .financial-support .finance-text .finance-description {
+      margin-top: 30px; }
+    .financial-support .finance-text li {
+      padding-bottom: 10px; }
+    .financial-support .finance-text .payment-bank li {
+      list-style: none; }
+    .financial-support .finance-text .donate-box {
+      white-space: nowrap;
+      margin-left: 100px; }
+      .financial-support .finance-text .donate-box li {
+        list-style: number; }
+    .financial-support .finance-text .finance-block {
+      margin-top: 40px; }
+
+.animals-help .animals-help-icon {
+  background: url("../img/i-medicine.svg") no-repeat center center;
+  background-size: contain;
+  height: 126px; }
+.animals-help .help-type ul {
+  font-weight: 400;
+  font-family: "Gilroy Regular"; }
+  .animals-help .help-type ul li {
+    padding-top: 10px; }
+.animals-help #where-send {
+  display: block;
+  align-self: flex-start;
+  margin-top: 25px; }
+
+.auto-help .auto-help-icon {
+  background: url("../img/i-to-hospital.svg") no-repeat center center;
+  background-size: contain;
+  height: 115px; }
+
+.volunteering {
+  padding-bottom: 50px;
+  padding-top: 50px; }
+  .volunteering .volunteering-content {
+    display: flex;
+    align-items: center; }
+    .volunteering .volunteering-content article {
+      margin-left: 75px;
+      max-width: 466px; }
+  .volunteering .volunteering-icon {
+    background: url("../img/i-care.svg") no-repeat center center;
+    background-size: contain;
+    height: 115px; }
+  .volunteering .dog-in-circle {
+    background: url("../img/dog-in-circle-2.png"); }
+
+.active {
+  display: none; }
 
 /*# sourceMappingURL=styles.css.map */

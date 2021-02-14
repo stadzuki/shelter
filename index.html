@@ -35,7 +35,7 @@
             </article>
             <div class="header-shelter-info">
                 <p class="info-text fz24 col-orange">У животных, находящихся в пункте отлова и временного содержания бродячих животных, есть всего несколько дней до усыпления...</p>
-                <a class="to-help fz20 col-gray-2" href="#">Хочу помочь</a>
+                <a class="to-help" href="#">Хочу помочь</a>
             </div>
             <div class="header-bg-text">
                 <div class="bg-text-1">Я буду<br><span>лучшим</span></div>
@@ -84,7 +84,7 @@
         </div>
     </section>
     <section class="care-of-animals">
-        <div class="pet-icon"></div>
+        <div class="pet-icon block-icons"></div>
         <div class="container">
             <div class="care-text">
                 <article class="care-text-left">
@@ -101,162 +101,177 @@
                 </article>
             </div>
             <div class="our-animals">
-                <h3 class="our-animals-title fz28 col-gray-2">Наши подопечные</h3>
+                <div class="our-animals-text">
+                    <h3 class="our-animals-title fz28 col-gray-2">Наши подопечные</h3>
+                    <p class="our-animals-watch-all content-link">Посмотреть всех (<span class="count-our-animals">157</span>)</p>
+                </div>
                 <div class="animals-slider">
                     <div class="animals-slide">
+                        <div class="slide-overlay"></div>
                         <div class="slide-header">
                             <img src="img/lynatic.png" alt="pet image" width="335" height="356">
                             <p class="pet-name fz22 col-gray-2">Блэки</p>
                         </div>
-                        <div class="slide-about-pet">
-                            <div class="pet-info fz14">
-                                <p class="pet-charect col-gray-4">Мальчик, 7 месяцев</p>
-                                <p class="pet-skill col-gray-2">Веселый и очень игривый, ему так нужны ваша любовь и ласка.У него потрясающая густая шерсть.</p>
-                            </div>
-                            <a href="#" class="more-info content-link">Подробнее</a>
+                        <div class="slide-about-pet fz14">
+                            <p class="pet-charect col-gray-4">Мальчик, 7 месяцев</p>
+                            <p class="pet-skill col-gray-2">Веселый и очень игривый, ему так нужны ваша любовь и ласка.У него потрясающая густая шерсть.</p>
                         </div>
+                        <a href="#" class="more-info content-link">Подробнее</a>
                     </div>
                     <div class="animals-slide">
+                        <div class="slide-overlay active"></div>
                         <div class="slide-header">
                             <img src="img/monik.png" alt="pet image" width="335" height="356">
                             <p class="pet-name fz22 col-gray-2">Моник</p>
                         </div>
-                        <div class="slide-about-pet">
-                            <div class="pet-info fz14">
-                                <p class="pet-charect col-gray-4">Мальчик, 7 месяцев</p>
-                                <p class="pet-skill col-gray-2">К поводку приучен. Не агрессивный. В еде не привередничает. С другими животными не конфликтует. Привит.</p>
-                            </div>
-                            <a href="#" class="more-info content-link">Подробнее</a>
+                        <div class="slide-about-pet fz14">
+                            <p class="pet-charect col-gray-4">Мальчик, 7 месяцев</p>
+                            <p class="pet-skill col-gray-2">К поводку приучен. Не агрессивный. В еде не привередничает. С другими животными не конфликтует. Привит.</p>
                         </div>
+                        <a href="#" class="more-info content-link">Подробнее</a>
                     </div>
                     <div class="animals-slide">
+                        <div class="slide-overlay"></div>
                         <div class="slide-header">
                             <img src="img/gerda.png" alt="pet image" width="335" height="356">
                             <p class="pet-name fz22 col-gray-2">Саманта</p>
                         </div>
-                        <div class="slide-about-pet">
-                            <div class="pet-info fz14">
-                                <p class="pet-charect col-gray-4">Девочка, 1 год</p>
-                                <p class="pet-skill col-gray-2">Очень ласковая мяукалка. Хочет домой.</p>
-                            </div>
-                            <a href="#" class="more-info content-link">Подробнее</a>
+                        <div class="slide-about-pet fz14">
+                            <p class="pet-charect col-gray-4">Девочка, 1 год</p>
+                            <p class="pet-skill col-gray-2">Очень ласковая мяукалка. Хочет домой.</p>
                         </div>
-                    </div>
-                    <div class="slider-controll">
-                        <div class="slider-left-arrow"></div>
-                        <div class="slider-buttons">
-                            <a id="take-to-home" href="#">Забрать домой</a>
-                            <a id="take-on-time" href="#">Забрать на передержку</a>
-                        </div>
+                        <a href="#" class="more-info content-link">Подробнее</a>
                     </div>
                 </div>
-                <p class="our-animals-watch-all content-link">Посмотреть всех (<span class="count-our-animals">157</span>)</p>
-            </div>
-            <div class="care-footer">
-                <p class="fz18 col-gray-2">Помочь быстрее пристроить хвостиков можно путем размещения наших постов у себя в соц сетях. Переходите на наши странички.</p>
-                <ul class="care-socials">
-                    <li><a href="#"><img src="img/" alt="vkontakte"></a></li>
-                    <li><a href="#"><img src="img/" alt="instagram"></a></li>
-                </ul>
+                <div class="slider-controll">
+                    <div class="slider-arrow slider-left-arrow"><img src="img/arrow-left.png" alt="Arrow Left"></div>
+                    <div class="slider-arrow slider-right-arrow"><img src="img/arrow-right.png" alt="Arrow Right"></div>
+                    <div class="slider-buttons">
+                        <a id="take-to-home" class="to-help" href="#">Забрать домой</a>
+                        <a id="take-on-time" class="gray-btn fz20 col-gray-2" href="#">Забрать на передержку</a>
+                    </div>
+                </div>
+                <div class="care-footer">
+                    <p class="fz18 col-gray-2">Помочь быстрее пристроить хвостиков можно путем размещения наших постов у себя в соц сетях. Переходите на наши странички.</p>
+                    <ul class="care-socials">
+                        <li><a href="#"><img src="img/vk-white.png" alt="vkontakte"></a></li>
+                        <li><a href="#"><img src="img/insta-white.png" alt="instagram"></a></li>
+                    </ul>
+                </div>
             </div>
         <!-- </div> -->
     </section>
-    <section class="financial-support">
-        <div class="finance-icon"></div>
-        <div class="finance-text">
+    <section class="financial-support settings-block">
+        <div class="finance-icon block-icons"></div>
+        <div class="finance-title">
             <h2 class="fz28 col-gray-2">Финансовая поддержка</h2>
             <p class="fz18 col-gray-4"> Такая помощь необходима для оплаты стерилизации, прививок, лечения больных животных, покупка корма и других жизненно необходимых вещей.</p>
         </div>
-        <div class="payment-bank">
-            <h3 clas="fz28 col-gray-2">Расчетный счет в Банке</h3>
-            <ul class="payment-list fz16 col-gray-2">
-                <li>БООЗЖ "СПАСИ ЖИЗНЬ"</li>
-                <li>УНП: 590375680</li>
-                <li>Текущий (расчетный) счет в BYN:</li>
-                <li>BY13ALFA30152555460010270000</li>
-                <li>ЗАО 'Альфа-Банк'</li>
-                <li>БИК: ALFABY2X</li>
-            </ul>
-            <div id="fast-pay" class="fz20 col-gray-2">Быстрый платеж</div>
-        </div>
-        <div class="donate-box">
-            <h3 clas="fz28 col-gray-2">Расчетный счет в Банке</h3>
-            <ul class="payment-list fz16 col-gray-2">
+        <div class="finance-text">
+            <div class="finance-block payment-bank">
+                <h3 class="fz28 col-gray-2 finance-text-title">Расчетный счет в Банке</h3>
+                <ul class="payment-list fz16 col-gray-2">
+                    <li>БООЗЖ "СПАСИ ЖИЗНЬ"</li>
+                    <li>УНП: 590375680</li>
+                    <li><strong>Текущий (расчетный) счет в BYN:</strong></li>
+                    <li>BY13ALFA30152555460010270000</li>
+                    <li>ЗАО 'Альфа-Банк'</li>
+                    <li>БИК: ALFABY2X</li>
+                </ul>
+                <div class="finance-description">
+                    <a id="finance-fast-pay" class="fz20 to-help">Быстрый платеж</a>
+                </div>
+            </div>
+            <div class="finance-block donate-box">
+                <h3 class="fz28 col-gray-2 finance-text-title">Расчетный счет в Банке</h3>
                 <p>Наши коробочки для пожертвований в г. Гродно:</p>
-                <li>1. Зоомаркет «Зообазар», ул. Комарова, 26а;</li>
-                <li>2. Учебный корпус ГГАУ, ул. Волковича, 1;</li>
-                <li>3. Парикмахерская «ПРИМАДОННА», ул. Гоголя, 11;</li>
-                <li>4. Зоомаркет «Зообазар» ул. Пушкина, 31а;</li>
-                <li>5. Гипермаркет «Евроопт», ул. Тимирязева, 8;</li>
-                <li>6. Гипермаркет «Евроопт», ул. Янки Купалы, 82А;</li>
-                <li>7. Фитнес-центр «АДРЕНАЛИН», ул. Подольная, д.37.</li>
-            </ul>
-            <div class="look-at-map">
-                <a id="look-at-map" class="content-link" href="#">Посмотреть на карте</a>
+                <ul class="payment-list fz16 col-gray-2">
+                    <li>Зоомаркет «Зообазар», ул. Комарова, 26а;</li>
+                    <li>Учебный корпус ГГАУ, ул. Волковича, 1;</li>
+                    <li>Парикмахерская «ПРИМАДОННА», ул. Гоголя, 11;</li>
+                    <li>Зоомаркет «Зообазар» ул. Пушкина, 31а;</li>
+                    <li>Гипермаркет «Евроопт», ул. Тимирязева, 8;</li>
+                    <li>Гипермаркет «Евроопт», ул. Янки Купалы, 82А;</li>
+                    <li>Фитнес-центр «АДРЕНАЛИН», ул. Подольная, д.37.</li>
+                </ul>
+                <div class="finance-description">
+                    <a id="look-at-map" class="content-link" href="#">Посмотреть на карте</a>
+                </div>
             </div>
         </div>
     </section>
-    <section class="animals-help">
-        <div class="animals-help-icon"></div>
-        <div class="help-type">
-            <article class="help-feed">
+    <section class="animals-help settings-block">
+        <div class="animals-help-icon block-icons"></div>
+        <div class="container">
+            <div class="help-type">
+                <article class="help-feed article-set">
+                    <header>
+                        <h3 class="fz28 col-gray-2">Корма</h3>
+                    </header>
+                    <ul class="help-list fz16 col-gray-2">
+                        <p>Можно помочь с покупкой и доставкой еды для хвостатых:</p>
+                        <li>Быстроразваривающиеся <strong>крупы:</strong> дроблёная гречка, овсянка, сечка, овсяные/гречневые хлопья, не требующие варки;</li>
+                        <li><strong>Сухие и влажные корма</strong> для собак и котов (кроме Рекс и Petboom),</li>
+                        <li><strong>Фарш для собак,</strong> "БОБИКИ" и др.</li>
+                    </ul>
+                    <footer>
+                        <p class="fz16 col-gray-4">Вы можете помочь в приготовлении каш и их доставке!</p>
+                    </footer>
+                </article>
+                <article class="help-medicines article-set">
+                    <header>
+                        <h3 class="fz28 col-gray-2">Лекарства</h3>
+                    </header>
+                    <p class="fz16 col-gray-2">Нам необходимы препараты: <strong>цефтриаксон</strong> (флакон по 0,5 г); <strong>новокаин</strong> (раствор для инъекций); <strong>гискан; гамавит; катозал; антитокс фоспренил; энтеросгель</strong> (паста); <strong>препараты от глистов, блох, клещей, для заживления ран.</strong></p>
+                </article>
+                <article class="help-another article-set">
+                    <header>
+                        <h3 class="fz28 col-gray-2">Другие нужные вещи</h3>
+                    </header>
+                    <ul class="help-list fz16 col-gray-2">
+                        <p>Для содержания животных всегда необходимы:</p>
+                        <li>Ошейники, поводки, намордники;</li>
+                        <li>Опилки и солома в любом количестве;</li>
+                        <li>Посуда для животных и для приготовления еды - миски, кастрюли, ножи, черпаки и др.);</li>
+                        <li>Теплые вещи, лежаки для утепления и уюта животных;</li>
+                        <li>Будки</li>
+                    </ul>
+                </article>
+            </div>
+            <a id="where-send" class="content-link" href="#">Кому и куда передать?</a>    
+        </div>
+        
+    </section>
+    <section class="auto-help settings-block">
+        <div class="auto-help-icon block-icons"></div>
+        <div class="container">
+            <article class="article-set">
                 <header>
-                    <h3 class="fz28 col-gray-2">Корма</h3>
+                    <h3 class="fz28 col-gray-2">Автопомощь</h3>
                 </header>
-                <ul class="help-list fz16 col-gray-2">
-                    <p>Можно помочь с покупкой и доставкой еды для хвостатых:</p>
-                    <li>Быстроразваривающиеся крупы: дроблёная гречка, овсянка, сечка, овсяные/гречневые хлопья, не требующие варки;</li>
-                    <li>Сухие и влажные корма для собак и котов (кроме Рекс и Petboom),</li>
-                    <li>Фарш для собак, "БОБИКИ" и др.</li>
-                </ul>
+                <p class="fz16 col-gray-2">Важной помощью будет транспортировка. Необходимо отвозить животных в ветеринарную клинику в сопровождении нашего волонтера или привозить еду. Если у вас есть автомобиль, немного свободного времени и доброе сердце - будем вам рады.</p>
                 <footer>
-                    <p class="fz16 col-gray-4">Вы можете помочь в приготовлении каш и их доставке!</p>
+                   <a href="#" class="send-request to-help">Оставить заявку</a> 
                 </footer>
             </article>
-            <article class="help-medicines">
-                <header>
-                    <h3 class="fz28 col-gray-2">Лекарства</h3>
-                </header>
-                <p class="fz16 col-gray-2">Нам необходимы препараты: цефтриаксон (флакон по 0,5 г); новокаин (раствор для инъекций); гискан; гамавит; катозал; антитокс фоспренил; энтеросгель (паста); препараты от глистов, блох, клещей, для заживления ран.</p>
-            </article>
-            <article class="help-another">
-                <header>
-                    <h3 class="fz28 col-gray-2">Другие нужные вещи</h3>
-                </header>
-                <ul class="help-list fz16 col-gray-2">
-                    <p>Для содержания животных всегда необходимы:</p>
-                    <li>Ошейники, поводки, намордники;</li>
-                    <li>Опилки и солома в любом количестве;</li>
-                    <li>Посуда для животных и для приготовления еды - миски, кастрюли, ножи, черпаки и др.);</li>
-                    <li>Теплые вещи, лежаки для утепления и уюта животных;</li>
-                    <li>Будки</li>
-                </ul>
-            </article>
         </div>
-        <a id="where-send" class="content-link" href="#">Кому и куда передать?</a>
-    </section>
-    <section class="auto-help">
-        <div class="auto-help-icon"></div>
-        <article class="single-content">
-            <header>
-                <h3 class="fz28 col-gray-2">Автопомощь</h3>
-            </header>
-            <p class="fz16 col-gray-2">Важной помощью будет транспортировка. Необходимо отвозить животных в ветеринарную клинику в сопровождении нашего волонтера или привозить еду. Если у вас есть автомобиль, немного свободного времени и доброе сердце - будем вам рады.</p>
-            <a href="#" class="fz20 col-orange send-request">Оставить заявку</a>
-        </article>
     </section>
     <section class="volunteering">
-        <div class="volunteering-icon"></div>
-        <div class="left-box-animals">
-            <div class="dog-in-circle"></div>
+        <div class="volunteering-icon block-icons"></div>
+        <div class="volunteering-content">
+            <div class="left-box-animals">
+                <div class="dog-in-circle"></div>
+            </div>
+            <article class="article-set">
+                <header>
+                    <h3 class="fz28 col-gray-2">Волонтерство</h3>
+                </header>
+                <p class="fz16 col-gray-2">Катастрофически не хватает добрых людей, которые готовы поделиться своим временем и окружить заботой животных. Много опыта не нужно, все расскажем и поможем! Если Вы располагаете несколькими часами свободного времени, проведите его с пользой! Главное условие - это Ваше совершеннолетие и любовь к животным! Часто животным не хватает обычных прогулок и игры, они сидят в клетках и грустят.</p>
+                <footer>
+                    <a href="#" class="send-request to-help">Оставить заявку</a> 
+                 </footer>
+            </article>
         </div>
-        <article class="single-content">
-            <header>
-                <h3 class="fz28 col-gray-2">Автопомощь</h3>
-            </header>
-            <p class="fz16 col-gray-2">Катастрофически не хватает добрых людей, которые готовы поделиться своим временем и окружить заботой животных. Много опыта не нужно, все расскажем и поможем! Если Вы располагаете несколькими часами свободного времени, проведите его с пользой! Главное условие - это Ваше совершеннолетие и любовь к животным! Часто животным не хватает обычных прогулок и игры, они сидят в клетках и грустят.</p>
-            <a href="#" class="fz20 col-orange send-request">Оставить заявку</a>
-        </article>
     </section>
     <section class="news">
         <h2 class="shelter-news-title fz28 col-gray-2">Новости</h2>
