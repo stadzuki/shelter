@@ -26,6 +26,10 @@ $font-semibold: 'Gilroy Semibold';
     url('../fonts/Gilroy-Medium.ttf') format('truetype');
 }
 
+html {
+    font-size: 14px;
+}
+
 body {
     font-family: $font-regular;
     box-sizing: border-box;
@@ -238,8 +242,8 @@ li {
     max-height: 713px;  
     min-width: 225px;
     min-width: 357px;
-    background: transparent url('../img/dog.png') no-repeat;
-    background-size: cover;
+    background: #FAC831 url('../img/dog.png') no-repeat;
+    background-size: contain;
 }
 
 .header-bg-cat {
@@ -257,7 +261,7 @@ li {
 }
 
 .header-bg-text {
-    z-index: -1;
+    z-index: -2;
     top: 50%;
     left: -9.5%;
     position: absolute;
@@ -265,7 +269,7 @@ li {
     opacity: 0.5;
     user-select: none;
     font-family: $font-semibold;
-    font-size: 150px;
+    font-size: 8em;
     line-height: 130px;
 
     .bg-text-1 {
@@ -273,13 +277,13 @@ li {
         text-align: center;
 
         span {
-            font-size: 115px;
+            font-size: 0.6em;
         }
     }
 
     .bg-text-2 {
         position: absolute;
-        margin-left: 46%;
+        left: 45%;
         bottom: -26%;
     }
 }
@@ -363,11 +367,14 @@ li {
     }
 
     .shelter-text {
+        margin-top: 5%;
+        line-height: 23px;
         max-width: 466px;
         margin-left: 75px;
 
         h2 {
             margin-bottom: 28px;
+            text-align: center;
         }
 
         p{margin-bottom: 20px;}
@@ -704,6 +711,233 @@ li {
     }
 }
 
+.news {
+    background-color: #fff;
+
+    .shelter-news-title {
+        text-align: center;
+    }
+
+    .news-block {
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+
+        .news-text {
+            max-width: 603px;
+            margin-left: 35px;
+        }
+    }
+
+    #all-news {
+        display: block;
+        margin-top: 25px;
+    }
+}
+
+.about-us {
+    line-height: 24px;
+    font-weight: normal;
+    font-family: $font-regular;
+
+    li {
+        list-style: none;
+    }
+
+    .about-us-description {
+        font-family: $font-medium;
+    }
+
+    .about-us-title {
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .about-us-text {
+        margin-top: 25px;
+        max-width: 680px;
+        font-weight: 500;
+    }
+
+    .about-us-contacts {
+
+        .contacts-title {
+            margin: 25px 0;
+        }
+
+        .contacts-list-title {
+            max-width: 680px;
+        }
+    }
+
+    .about-us-socials {
+        margin-top: 40px;
+
+        .social-list {
+            display: flex;
+            margin-top: 10px;
+        }
+    }    
+}
+
+.thanks-for-help {
+    position: relative;
+    background: url('../img/bg-thanks.png') no-repeat center center;
+    background-size: cover;
+    height: 741px;  
+
+    .text-left {
+        mix-blend-mode: soft-light;
+        position: absolute;
+        top: 17%;
+        width: 50%;
+        height: 521px;
+        background-color: #322D1E;
+        border-top-right-radius: 270px;
+        border-bottom-right-radius: 270px;
+    }
+}
+
+.thanks-text {
+    background: url('../img/thanks-paw.png') no-repeat right 70px; 
+    padding-right: 95px;  
+    position: absolute;
+    margin-left: 135px;
+    font-family: $font-medium;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    color: #FFFFFF;
+    top: 43%;
+}
+
+.main-footer {
+    padding: 40px 0px 16px;
+
+    .settings-block {
+        flex-wrap: wrap;
+    }
+
+    .footer-list {
+        display: flex;
+        margin: 0px 0px 24px;
+
+        div {
+            display: flex;
+        }
+
+        .right-list {
+            margin-left: 120px;
+        }
+
+        li {
+            list-style: none;
+            padding-left: 40px;
+        }
+    }
+
+    .copyright {
+        font-family: $font-regular;
+        color: #B3B3B3;
+        font-weight: normal;
+        font-size: 12px;
+    }
+}
+
 .active {
     display: none;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1269px) {
+    .container {
+        max-width: 804px;
+    }
+
+    .fz72 {
+        font-size: 64px;
+    }
+
+    .fz16 {
+        font-size: 14px;
+    }
+
+    .fz18 {
+        font-size: 16px;
+    }
+
+    .fz28 {
+        font-size: 24px;
+    }
+
+    .main-header {
+
+        .header-main-text {
+
+            header {
+                h1 {
+                    // font-size: 64px;  
+                }
+            }
+
+            .header-our-aim {
+                max-width: 461px;
+                // font-size: 14px;
+            }
+        }
+    
+        .header-bg-dog {
+            width: 504px;
+        }
+
+        .header-shelter-info {
+            max-width: 300px;
+        }
+    }
+
+    .about-shelter .shelter-text {
+        max-width: 323px;
+    }
+
+    .how-to-help .help-list .help-item .help-icon {
+        width: 110px;
+        height: 110px;
+    }
+
+    .how-to-help .help-list .help-item .help-description {
+        max-width: 140px;
+    }
+
+    .care-of-animals .care-text article {
+        max-width: 275px;
+    }
+    
+    .care-of-animals .care-footer p {
+        max-width: 529px;
+    }
+
+    .financial-support .finance-title {
+        max-width: 530px;
+    }
+
+    .financial-support .finance-text .donate-box {
+        white-space: normal;
+        max-width: 274px;
+    }
+
+    .volunteering .volunteering-content article {
+        max-width: 323px;
+    }
+
+    .news .news-block .news-text {
+        max-width: 433px;
+    }
+
+    .thanks-text {
+        background: url("../img/thanks-paw.png") no-repeat right 40px;
+        font-size: 48px;
+    }
+
+    .shelter-text {
+        margin-top: 10%; 
+    }
 }

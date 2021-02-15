@@ -37,12 +37,12 @@
                 <p class="info-text fz24 col-orange">У животных, находящихся в пункте отлова и временного содержания бродячих животных, есть всего несколько дней до усыпления...</p>
                 <a class="to-help" href="#">Хочу помочь</a>
             </div>
-            <div class="header-bg-text">
-                <div class="bg-text-1">Я буду<br><span>лучшим</span></div>
-                <div class="bg-text-2">другом</div>
-            </div>
             <div class="header-bg-dog"></div>
             <div class="header-bg-cat"></div>
+        </div>
+        <div class="header-bg-text">
+            <div class="bg-text-1">Я буду<br><span>лучшим</span></div>
+            <div class="bg-text-2">другом</div>
         </div>
     </header>
     <section class="about-shelter">
@@ -103,7 +103,7 @@
             <div class="our-animals">
                 <div class="our-animals-text">
                     <h3 class="our-animals-title fz28 col-gray-2">Наши подопечные</h3>
-                    <p class="our-animals-watch-all content-link">Посмотреть всех (<span class="count-our-animals">157</span>)</p>
+                    <a href="#" class="our-animals-watch-all content-link">Посмотреть всех (<span class="count-our-animals">157</span>)</a>
                 </div>
                 <div class="animals-slider">
                     <div class="animals-slide">
@@ -273,17 +273,69 @@
             </article>
         </div>
     </section>
-    <section class="news">
-        <h2 class="shelter-news-title fz28 col-gray-2">Новости</h2>
-        <section class="news news-01">
-            <div class="news-image"></div>
-            <div class="news-text fz16 col-gray-2">Срочно необходимо забрать собаку (мальчик) на передержку или насовсем. Послезавтра его ждет усыпление. С кормом и доставкой поможем. В данный момент находится в вольера САХа. Контактный телефон + 37529 58930557 Спасите жизнь хвостику.</div>
-        </section>
-        <section class="news news-02">
-            <div class="news-image"></div>
-            <div class="news-text fz16 col-gray-2">Найдены бедомные щенки по улице Горького д.56. Сегодня будут перевезены в вольеры САХа. Если у вас есть возможность взять на передержку или пристроить малышей - будем вам очень благодарны.</div>
-        </section>
-        <a id="all-news" class="content-link" href="#">Показать все новости</a>
+    <section class="news settings-block">
+        <div class="container">
+            <h2 class="shelter-news-title fz28 col-gray-2">Новости</h2>
+            <div class="news-blocks">
+                <section class="news-block news-01">
+                    <div class="news-image">
+                        <img src="img/animal-news-1.png" alt="animal-photo-1">
+                    </div>
+                    <div class="news-text fz16 col-gray-2">Срочно необходимо забрать собаку (мальчик) на передержку или насовсем. Послезавтра его ждет усыпление. С кормом и доставкой поможем. В данный момент находится в вольера САХа. Контактный телефон + 37529 58930557 Спасите жизнь хвостику.</div>
+                </section>
+                <section class="news-block news-02">
+                    <div class="news-image">
+                        <img src="img/animal-news-2.png" alt="animal-photo-2">
+                    </div>
+                    <div class="news-text fz16 col-gray-2">Найдены бедомные щенки по улице Горького д.56. Сегодня будут перевезены в вольеры САХа. Если у вас есть возможность взять на передержку или пристроить малышей - будем вам очень благодарны.</div>
+                </section>
+            </div>
+            <a id="all-news" class="content-link" href="#">Показать все новости</a>
+        </div>
     </section>
+    <section class="about-us settings-block col-gray-2">
+        <div class="container">
+            <div class="about-us-description">
+                <h2 class="about-us-title fz28">О нас</h2>
+                <p class="about-us-text fz18 ">Мы - благотворительное общественное объединение защиты животных «СПАСИ ЖИЗНЬ». Цель нашей деятельности: помощь бездомным животным, оказавшимся в Пункте отлова и временного содержания безнадзорных животных г.Гродно.</p>
+            </div>
+            <div class="about-us-contacts">
+                <h3 class="contacts-title">Контакты</h3>
+                <div class="contacts-list-title">Если Вы хотите приютить одного из этих четвероногих или оказать какую-либо помощь, звоните волонтёрам:</div>
+                <ul class="contacts-list">
+                    <li>+375 (33) 6237879, Лена</li>
+                    <li>+375 (29) 7877791, Ольга</li>
+                    <li>+375 (29) 5837015, Рита</li>
+                </ul>
+            </div>
+            <div class="about-us-socials">
+                <p class="col-gray-4 fz16">Связаться с нами можно написав в соц. сетях.</p>
+                <ul class="social-list">
+                    <li><a href="#"><img src="img/vk-icon.svg" alt="vkontakte"></a></li>
+                    <li><a href="#"><img src="img/instagram-icon.svg" alt="instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="thanks-for-help">
+        <div class="text-left"></div>
+        <p class="thanks-text">Спасибо<br>за помощь</p>
+    </section>
+    <footer class="main-footer settings-block">
+        <ul class="footer-list">
+            <div class="left-list">
+                <li><a class="col-gray-3 fz14" href="#">Дом или передержка</a></li>
+                <li><a class="col-gray-3 fz14" href="#">Финансовая поддержка</a></li>
+                <li><a class="col-gray-3 fz14" href="#">Корма, лекарства и другие вещи</a></li>
+                <li><a class="col-gray-3 fz14" href="#">Автопомощь</a></li>
+                <li><a class="col-gray-3 fz14" href="#">Волонтерство</a></li>
+            </div>
+            <div class="right-list">
+                <li><a class="col-gray-3 fz14" href="#">О нас</a></li>
+                <li><a class="col-gray-3 fz14" href="#">Контакты</a></li>
+            </div>
+        </ul>
+        <div class="copyright">© 2020 БООЗЖ "СПАСИ ЖИЗНЬ"</div>
+    </footer>
 </body>
 </html>
