@@ -22,6 +22,36 @@ ul, h1, h2, h3, body, p {
   padding: 0;
   margin: 0; }
 
+.burger-menu {
+  padding-top: 10px;
+  display: none;
+  justify-content: space-around;
+  align-items: center; }
+
+.burger-list {
+  display: flex;
+  list-style: none; }
+
+.burger-btn {
+  position: relative;
+  height: 3px;
+  width: 30px;
+  background-color: #242424; }
+  .burger-btn::before {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+    transform: translateY(-10px); }
+  .burger-btn::after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+    transform: translateY(10px); }
+
 .left-box-animals {
   position: relative;
   width: 50%;
@@ -210,18 +240,15 @@ li {
   min-width: 225px;
   min-width: 357px;
   background: #FAC831 url("../img/dog.png") no-repeat;
-  background-size: contain; }
+  background-size: contain;
+  border-radius: 0px 0px 8px 8px; }
 
 .header-bg-cat {
   position: absolute;
   bottom: -15%;
   right: 15%;
-  width: 100%;
-  height: 100%;
-  max-width: 483px;
-  min-width: 165px;
-  max-height: 469px;
-  min-height: 157px;
+  width: 483px;
+  height: 469px;
   background: transparent url("../img/cat 1.png") no-repeat;
   background-size: cover; }
 
@@ -628,15 +655,30 @@ li {
   .fz18 {
     font-size: 16px; }
 
+  .fz24 {
+    font-size: 20px; }
+
   .fz28 {
     font-size: 24px; }
 
-  .main-header .header-main-text .header-our-aim {
-    max-width: 461px; }
-  .main-header .header-bg-dog {
-    width: 504px; }
-  .main-header .header-shelter-info {
-    max-width: 300px; }
+  .burger-menu {
+    display: flex; }
+
+  .main-nav {
+    display: none; }
+
+  .main-header {
+    height: 642px; }
+    .main-header .header-main-text .header-our-aim {
+      max-width: 461px; }
+    .main-header .header-bg-dog {
+      width: 504px;
+      height: 90%; }
+    .main-header .header-bg-cat {
+      width: 344px;
+      height: 326px; }
+    .main-header .header-shelter-info {
+      max-width: 300px; }
 
   .about-shelter .shelter-text {
     max-width: 323px; }
@@ -673,5 +715,46 @@ li {
 
   .shelter-text {
     margin-top: 10%; } }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .fz72 {
+    font-size: 42px; }
+
+  .fz16 {
+    font-size: 14px; }
+
+  .fz18 {
+    font-size: 16px; }
+
+  .fz24 {
+    font-size: 16px; }
+
+  .fz28 {
+    font-size: 24px; }
+
+  .container {
+    max-width: 560px; }
+
+  .burger-menu {
+    display: flex; }
+
+  .main-nav {
+    display: none; }
+
+  .main-header {
+    height: 535px; }
+    .main-header .save-aninals-title {
+      line-height: 50px; }
+    .main-header .save-aninals-text {
+      max-width: 311px; }
+    .main-header .header-main-text .header-our-aim {
+      max-width: 311px; }
+    .main-header .header-bg-dog {
+      width: 344px;
+      height: 85%; }
+    .main-header .header-bg-cat {
+      width: 235px;
+      height: 222px; }
+    .main-header .header-shelter-info {
+      max-width: 204px; } }
 
 /*# sourceMappingURL=styles.css.map */

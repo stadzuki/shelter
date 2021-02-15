@@ -41,6 +41,43 @@ ul, h1, h2, h3, body, p {
     margin: 0;
 }
 
+.burger-menu {
+    padding-top: 10px;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.burger-list {
+    display: flex;
+    list-style: none;
+}
+
+.burger-btn {
+    position: relative;
+    height: 3px;
+    width: 30px;
+    background-color: #242424;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: inherit;
+        transform: translateY(-10px);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: inherit;
+        transform: translateY(10px);
+    }
+}
+
 .left-box-animals {
     position: relative;
     width: 50%;
@@ -244,18 +281,15 @@ li {
     min-width: 357px;
     background: #FAC831 url('../img/dog.png') no-repeat;
     background-size: contain;
+    border-radius: 0px 0px 8px 8px;
 }
 
 .header-bg-cat {
     position: absolute;
     bottom: -15%;
     right: 15%;
-    width: 100%;
-    height: 100%;
-    max-width: 483px;
-    min-width: 165px;
-    max-height: 469px;
-    min-height: 157px;
+    width: 483px;
+    height: 469px;
     background: transparent url('../img/cat 1.png') no-repeat;
     background-size: cover;
 }
@@ -849,44 +883,36 @@ li {
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1269px) {
-    .container {
-        max-width: 804px;
-    }
+    .container {max-width: 804px;}
 
-    .fz72 {
-        font-size: 64px;
-    }
+    .fz72 {font-size: 64px;}
 
-    .fz16 {
-        font-size: 14px;
-    }
+    .fz16 {font-size: 14px;}
 
-    .fz18 {
-        font-size: 16px;
-    }
+    .fz18 {font-size: 16px;}
 
-    .fz28 {
-        font-size: 24px;
-    }
+    .fz24 {font-size: 20px;}
 
+    .fz28 {font-size: 24px;}
+
+    .burger-menu {display: flex;}
+
+    .main-nav {display: none;}
+
+    //header
     .main-header {
+        height: 642px;
 
-        .header-main-text {
-
-            header {
-                h1 {
-                    // font-size: 64px;  
-                }
-            }
-
-            .header-our-aim {
-                max-width: 461px;
-                // font-size: 14px;
-            }
-        }
+        .header-main-text .header-our-aim {max-width: 461px;}
     
         .header-bg-dog {
             width: 504px;
+            height: 90%;
+        }
+
+        .header-bg-cat {
+            width: 344px;
+            height: 326px;
         }
 
         .header-shelter-info {
@@ -894,10 +920,12 @@ li {
         }
     }
 
+    //About shelter
     .about-shelter .shelter-text {
         max-width: 323px;
     }
 
+    //help
     .how-to-help .help-list .help-item .help-icon {
         width: 110px;
         height: 110px;
@@ -907,6 +935,7 @@ li {
         max-width: 140px;
     }
 
+    //care
     .care-of-animals .care-text article {
         max-width: 275px;
     }
@@ -915,6 +944,7 @@ li {
         max-width: 529px;
     }
 
+    //finance
     .financial-support .finance-title {
         max-width: 530px;
     }
@@ -924,14 +954,17 @@ li {
         max-width: 274px;
     }
 
+    //volunteering
     .volunteering .volunteering-content article {
         max-width: 323px;
     }
 
+    //news
     .news .news-block .news-text {
         max-width: 433px;
     }
 
+    //thanks
     .thanks-text {
         background: url("../img/thanks-paw.png") no-repeat right 40px;
         font-size: 48px;
@@ -939,5 +972,48 @@ li {
 
     .shelter-text {
         margin-top: 10%; 
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .fz72 {font-size: 42px;}
+
+    .fz16 {font-size: 14px;}
+
+    .fz18 {font-size: 16px;}
+
+    .fz24 {font-size: 16px;}
+
+    .fz28 {font-size: 24px;}
+
+    .container {max-width: 560px;}
+
+    .burger-menu {display: flex;}
+
+    //header
+    .main-nav {display: none;}
+
+    .main-header {
+        height: 535px;
+
+        .save-aninals-title {line-height: 50px;}
+
+        .save-aninals-text {max-width: 311px;}
+
+        .header-main-text .header-our-aim {max-width: 311px;}
+    
+        .header-bg-dog {
+            width: 344px;
+            height: 85%;
+        }
+
+        .header-bg-cat {
+            width: 235px;
+            height: 222px;
+        }
+
+        .header-shelter-info {
+            max-width: 204px;
+        }
     }
 }
