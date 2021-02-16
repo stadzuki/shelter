@@ -1,3 +1,4 @@
+@import url(mobile.scss);
 @font-face {
   font-family: 'Gilroy Semibold';
   src: url("../fonts/Gilroy-SemiBold.eot");
@@ -16,7 +17,8 @@ html {
 body {
   font-family: "Gilroy Regular";
   box-sizing: border-box;
-  background-color: #f6f6f6; }
+  background-color: #f6f6f6;
+  line-height: 20px; }
 
 ul, h1, h2, h3, body, p {
   padding: 0;
@@ -52,10 +54,14 @@ ul, h1, h2, h3, body, p {
     background-color: inherit;
     transform: translateY(10px); }
 
+.financial-support .finance-text .donate-box .payment-list li {
+  list-style-position: inside; }
+
 .left-box-animals {
   position: relative;
   width: 50%;
   height: 521px;
+  margin-top: 3%;
   background-color: #FAC832;
   border-top-right-radius: 270px;
   border-bottom-right-radius: 270px; }
@@ -150,6 +156,9 @@ ul, h1, h2, h3, body, p {
     box-shadow: 7px 7px 16px #E3E3E3, -3px -4px 8px rgba(255, 255, 255, 0.9), inset 13px 22px 8px rgba(0, 0, 0, 0.02);
     border: solid 1px #e6d6aa; }
 
+#finance-fast-pay {
+  z-index: 1; }
+
 .gray-btn {
   position: relative;
   font-family: "Gilroy Medium";
@@ -233,13 +242,9 @@ li {
   top: 0;
   right: 0;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  max-width: 718px;
-  max-height: 713px;
-  min-width: 225px;
-  min-width: 357px;
-  background: #FAC831 url("../img/dog.png") no-repeat;
+  width: 718px;
+  height: 713px;
+  background: #FAC831 url("../img/dog.png") no-repeat right bottom;
   background-size: contain;
   border-radius: 0px 0px 8px 8px; }
 
@@ -312,16 +317,18 @@ li {
 .about-shelter {
   background-color: #fff;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding-top: 55px;
   padding-bottom: 95px; }
   .about-shelter .dog-in-circle {
-    background: url("../img/dog-in-circle.png"); }
+    background: url("../img/dog-in-circle.png") no-repeat center;
+    background-size: cover; }
   .about-shelter .cat-in-circle {
     position: absolute;
     width: 228px;
     height: 228px;
-    background: #242424 url("../img/cat-in-circle.png");
+    background: #242424 url("../img/cat-in-circle.png") no-repeat center;
+    background-size: cover;
     border: solid 7px #ebbf3a;
     border-radius: 100%;
     right: -5%;
@@ -346,26 +353,32 @@ li {
 .how-to-help .help-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 80px; }
   .how-to-help .help-list .help-item {
+    margin-top: 30px;
     max-width: 166px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column; }
+    .how-to-help .help-list .help-item:first-child {
+      padding: 0; }
     .how-to-help .help-list .help-item .icon-support {
-      background: transparent url("../img/i-support.svg") no-repeat center; }
+      background: transparent url("../img/i-support.svg") no-repeat center;
+      background-size: contain; }
     .how-to-help .help-list .help-item .icon-money-help {
-      background: transparent url("../img/i-money-help.svg") no-repeat center; }
+      background: transparent url("../img/i-money-help.svg") no-repeat center;
+      background-size: contain; }
     .how-to-help .help-list .help-item .icon-medicine {
-      background: transparent url("../img/i-medicine.svg") no-repeat center; }
+      background: transparent url("../img/i-medicine.svg") no-repeat center;
+      background-size: contain; }
     .how-to-help .help-list .help-item .icon-to-hospital {
-      background: transparent url("../img/i-to-hospital.svg") no-repeat center; }
+      background: transparent url("../img/i-to-hospital.svg") no-repeat center;
+      background-size: contain; }
     .how-to-help .help-list .help-item .icon-care {
-      background: transparent url("../img/i-care.svg") no-repeat center; }
-    .how-to-help .help-list .help-item svg {
-      width: 80px; }
+      background: transparent url("../img/i-care.svg") no-repeat center;
+      background-size: contain; }
     .how-to-help .help-list .help-item .help-icon {
       background-color: transparent;
       width: 150px;
@@ -550,13 +563,15 @@ li {
     background-size: contain;
     height: 115px; }
   .volunteering .dog-in-circle {
-    background: url("../img/dog-in-circle-2.png"); }
+    background: url("../img/dog-in-circle-2.png") no-repeat center;
+    background-size: cover; }
 
 .news {
   background-color: #fff; }
   .news .shelter-news-title {
     text-align: center; }
   .news .news-block {
+    line-height: 20px;
     display: flex;
     align-items: center;
     margin-top: 40px; }
@@ -602,7 +617,7 @@ li {
     position: absolute;
     top: 17%;
     width: 50%;
-    height: 521px;
+    height: 70%;
     background-color: #322D1E;
     border-top-right-radius: 270px;
     border-bottom-right-radius: 270px; }
@@ -611,7 +626,7 @@ li {
   background: url("../img/thanks-paw.png") no-repeat right 70px;
   padding-right: 95px;
   position: absolute;
-  margin-left: 135px;
+  margin-left: 10%;
   font-family: "Gilroy Medium";
   font-style: normal;
   font-weight: bold;
@@ -729,7 +744,7 @@ li {
     font-size: 16px; }
 
   .fz28 {
-    font-size: 24px; }
+    font-size: 20px; }
 
   .container {
     max-width: 560px; }
@@ -741,7 +756,8 @@ li {
     display: none; }
 
   .main-header {
-    height: 535px; }
+    height: 535px;
+    padding-bottom: 50px; }
     .main-header .save-aninals-title {
       line-height: 50px; }
     .main-header .save-aninals-text {
@@ -753,8 +769,493 @@ li {
       height: 85%; }
     .main-header .header-bg-cat {
       width: 235px;
-      height: 222px; }
+      height: 222px;
+      bottom: -5%; }
     .main-header .header-shelter-info {
-      max-width: 204px; } }
+      max-width: 204px; }
+
+  .about-shelter {
+    padding-bottom: 30px;
+    padding-top: 0; }
+    .about-shelter .shelter-text {
+      max-width: 264px;
+      margin-left: 55px; }
+    .about-shelter .left-box-animals {
+      height: 273px; }
+      .about-shelter .left-box-animals .dog-in-circle {
+        width: 243px;
+        height: 243px; }
+      .about-shelter .left-box-animals .cat-in-circle {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        right: -5%;
+        bottom: -5%; }
+
+  .how-to-help .help-list .help-item .help-icon {
+    width: 110px;
+    height: 110px; }
+
+  .how-to-help .how-to-help-title {
+    margin: 65px 0px 0px; }
+
+  .care-of-animals .care-text article {
+    max-width: 190px; }
+
+  .care-of-animals .care-footer p {
+    max-width: 379px; }
+
+  .financial-support .finance-title {
+    max-width: 358px; }
+
+  .financial-support .finance-text .finance-block {
+    white-space: normal;
+    max-width: 237px; }
+
+  .volunteering .volunteering-content article {
+    margin-left: 45px; }
+    .volunteering .volunteering-content article p {
+      max-width: 217px; }
+  .volunteering .left-box-animals {
+    height: 300px; }
+    .volunteering .left-box-animals .dog-in-circle {
+      width: 266px;
+      height: 266px; }
+
+  .auto-help .article-set {
+    max-width: 398px; }
+
+  .news .news-block .news-text {
+    max-width: 304px; }
+
+  .news .news-image img {
+    width: 104px;
+    height: 104px; }
+
+  .about-us .container {
+    max-width: 466px; }
+
+  .thanks-for-help {
+    height: 416px; }
+
+  .thanks-text {
+    background: url("../img/thanks-paw.png") no-repeat right 10px;
+    font-size: 36px; } }
+@media screen and (min-width: 640px) and (max-width: 767px) {
+  .fz72 {
+    font-size: 30px; }
+
+  .fz16 {
+    font-size: 14px; }
+
+  .fz18 {
+    font-size: 16px; }
+
+  .fz24 {
+    font-size: 16px; }
+
+  .fz28 {
+    font-size: 16px; }
+
+  .container {
+    max-width: 640px; }
+
+  .burger-menu {
+    display: flex; }
+
+  .main-nav {
+    display: none; }
+
+  .main-header {
+    height: 566px;
+    padding-bottom: 50px; }
+    .main-header .save-aninals-title {
+      line-height: 36px; }
+    .main-header .save-aninals-text {
+      max-width: 282px;
+      margin-bottom: 20px;
+      font-size: 12px; }
+    .main-header .header-main-text .header-our-aim {
+      max-width: 311px; }
+    .main-header .header-bg-dog {
+      width: 312px;
+      height: 65%; }
+    .main-header .header-bg-cat {
+      width: 165px;
+      height: 157px;
+      bottom: 23%; }
+    .main-header .container .header-main-text {
+      margin-left: 16%; }
+    .main-header .header-shelter-info {
+      position: absolute;
+      left: 20%;
+      bottom: 0px;
+      text-align: center;
+      max-width: 381px; }
+      .main-header .header-shelter-info .info-text {
+        margin-bottom: 20px;
+        margin-top: 0; }
+
+  .about-shelter {
+    padding-bottom: 15px;
+    padding-top: 0;
+    flex-direction: column; }
+    .about-shelter .shelter-text {
+      max-width: 382px;
+      margin-left: 55px;
+      align-self: center;
+      margin-left: 0; }
+    .about-shelter .left-box-animals {
+      height: 197px;
+      width: 65%; }
+      .about-shelter .left-box-animals .dog-in-circle {
+        top: 6.5%;
+        right: 4%;
+        width: 172px;
+        height: 172px; }
+      .about-shelter .left-box-animals .cat-in-circle {
+        position: absolute;
+        width: 84px;
+        height: 84px;
+        right: -5%;
+        bottom: -5%; }
+
+  .how-to-help .help-list .help-item .help-icon {
+    width: 80px;
+    height: 80px; }
+
+  .how-to-help .help-list .help-item {
+    margin-right: 20px; }
+
+  .how-to-help .help-description {
+    max-width: 142px; }
+  .how-to-help .how-to-help-title {
+    margin: 35px 0px 0px; }
+
+  .how-to-help .help-list .help-item {
+    align-items: center; }
+    .how-to-help .help-list .help-item .icon-support {
+      background-size: 44px 43px; }
+    .how-to-help .help-list .help-item .icon-money-help {
+      background-size: 49px 35px; }
+    .how-to-help .help-list .help-item .icon-medicine {
+      background-size: 49px 38px; }
+    .how-to-help .help-list .help-item .icon-to-hospital {
+      background-size: 44px; }
+    .how-to-help .help-list .help-item .icon-care {
+      background-size: 35px 46px; }
+
+  .how-to-help .help-list {
+    justify-content: center; }
+
+  .care-of-animals .care-text article {
+    max-width: 382px; }
+
+  .care-of-animals .care-footer p {
+    max-width: 382px; }
+
+  .care-of-animals .care-text {
+    align-items: center;
+    flex-direction: column; }
+    .care-of-animals .care-text article header {
+      text-align: center; }
+
+  .care-of-animals .care-footer {
+    flex-direction: column;
+    align-items: center; }
+    .care-of-animals .care-footer .fz18 {
+      font-size: 14px; }
+
+  .financial-support {
+    padding-top: 35px; }
+
+  .financial-support .finance-title {
+    max-width: 358px; }
+
+  .financial-support .finance-text .finance-block {
+    white-space: normal;
+    max-width: 382px;
+    list-style-position: inside; }
+
+  .animals-help .container {
+    max-width: 382px;
+    line-height: 20px; }
+
+  .animals-help .help-type ul li {
+    padding: 0; }
+
+  .article-set footer {
+    margin: 0; }
+
+  .auto-help .container {
+    max-width: 382px; }
+
+  .auto-help .article-set {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .auto-help .article-set p {
+      margin-bottom: 20px; }
+
+  .volunteering {
+    padding-top: 0; }
+    .volunteering .volunteering-content {
+      align-items: flex-start;
+      flex-direction: column; }
+      .volunteering .volunteering-content .article-set {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+    .volunteering .volunteering-content article {
+      margin-left: 0px;
+      align-self: center; }
+      .volunteering .volunteering-content article p {
+        max-width: 382px;
+        margin-bottom: 20px; }
+    .volunteering .left-box-animals {
+      height: 197px;
+      width: 65%; }
+      .volunteering .left-box-animals .dog-in-circle {
+        top: 6.5%;
+        right: 4%;
+        width: 172px;
+        height: 172px; }
+
+  .news .news-block .news-text {
+    max-width: 287px; }
+
+  .news .news-image img {
+    width: 79px;
+    height: 79px; }
+
+  .about-us .container {
+    max-width: 466px; }
+
+  .about-us .about-us-socials {
+    display: flex;
+    align-items: center; }
+    .about-us .about-us-socials .fz16 {
+      font-size: 16px; }
+
+  .thanks-text {
+    background: url("../img/thanks-paw.png") no-repeat right 0px;
+    font-size: 30px;
+    line-height: 36px; }
+
+  .thanks-for-help {
+    height: 360px; }
+
+  .shelter-text {
+    margin-top: 10%; } }
+@media screen and (min-width: 360px) and (max-width: 639px) {
+  .fz72 {
+    font-size: 30px; }
+
+  .fz16 {
+    font-size: 14px; }
+
+  .fz18 {
+    font-size: 16px; }
+
+  .fz24 {
+    font-size: 16px; }
+
+  .fz28 {
+    font-size: 16px; }
+
+  .container {
+    max-width: 640px; }
+
+  .burger-menu {
+    display: flex; }
+
+  .main-nav {
+    display: none; }
+
+  .main-header {
+    height: 566px;
+    padding-bottom: 50px; }
+    .main-header .save-aninals-title {
+      line-height: 36px; }
+    .main-header .save-aninals-text {
+      max-width: 211px;
+      margin-bottom: 20px;
+      font-size: 12px; }
+    .main-header .header-main-text .header-our-aim {
+      max-width: 158px; }
+    .main-header .header-bg-dog {
+      width: 225px;
+      height: 65%; }
+    .main-header .header-bg-cat {
+      width: 165px;
+      height: 157px;
+      bottom: 23%; }
+    .main-header .container .header-main-text {
+      margin-left: 9%; }
+    .main-header .header-shelter-info {
+      position: absolute;
+      left: 8%;
+      bottom: -10px;
+      text-align: center;
+      max-width: 300px; }
+      .main-header .header-shelter-info .info-text {
+        margin-bottom: 20px;
+        margin-top: 0; }
+
+  .about-shelter {
+    padding-bottom: 15px;
+    padding-top: 0;
+    flex-direction: column; }
+    .about-shelter .shelter-text {
+      max-width: 310px;
+      margin-top: 30px;
+      align-self: center;
+      margin-left: 0; }
+    .about-shelter .left-box-animals {
+      height: 197px;
+      width: 65%; }
+      .about-shelter .left-box-animals .dog-in-circle {
+        top: 6.5%;
+        right: 4%;
+        width: 172px;
+        height: 172px; }
+      .about-shelter .left-box-animals .cat-in-circle {
+        position: absolute;
+        width: 84px;
+        height: 84px;
+        right: -5%;
+        bottom: -5%; }
+
+  .how-to-help .help-list .help-item .help-icon {
+    width: 80px;
+    height: 80px; }
+
+  .how-to-help .help-description {
+    max-width: 142px; }
+  .how-to-help .how-to-help-title {
+    margin: 35px 0px 0px; }
+
+  .how-to-help .help-list {
+    justify-content: center; }
+
+  .how-to-help .help-list .help-item {
+    align-items: center; }
+    .how-to-help .help-list .help-item .icon-support {
+      background-size: 44px 43px; }
+    .how-to-help .help-list .help-item .icon-money-help {
+      background-size: 49px 35px; }
+    .how-to-help .help-list .help-item .icon-medicine {
+      background-size: 49px 38px; }
+    .how-to-help .help-list .help-item .icon-to-hospital {
+      background-size: 44px; }
+    .how-to-help .help-list .help-item .icon-care {
+      background-size: 35px 46px; }
+
+  .care-of-animals .care-text article {
+    max-width: 300px; }
+
+  .care-of-animals .care-footer p {
+    max-width: 300px; }
+
+  .care-of-animals .care-text {
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 15px; }
+    .care-of-animals .care-text article header {
+      text-align: center; }
+
+  .care-of-animals .care-text article {
+    margin-bottom: 20px; }
+
+  .care-of-animals .care-footer {
+    flex-direction: column;
+    align-items: center; }
+    .care-of-animals .care-footer .fz18 {
+      font-size: 14px; }
+
+  .financial-support {
+    padding-top: 35px; }
+
+  .financial-support .finance-title {
+    max-width: 358px; }
+
+  .financial-support .finance-text .finance-block {
+    white-space: normal;
+    max-width: 300px;
+    margin-left: 0; }
+
+  .financial-support .finance-text .donate-box {
+    max-width: 220px; }
+
+  .animals-help .container {
+    max-width: 382px;
+    line-height: 20px; }
+
+  .animals-help .help-type ul li {
+    padding: 0; }
+
+  .article-set footer {
+    margin: 0; }
+
+  .auto-help .container {
+    max-width: 382px; }
+
+  .auto-help .article-set {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .auto-help .article-set p {
+      margin-bottom: 20px; }
+
+  .volunteering {
+    padding-top: 0; }
+    .volunteering .volunteering-content {
+      align-items: flex-start;
+      flex-direction: column; }
+      .volunteering .volunteering-content .article-set {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+    .volunteering .volunteering-content article {
+      margin-left: 0px;
+      align-self: center; }
+      .volunteering .volunteering-content article p {
+        max-width: 382px;
+        margin-bottom: 20px; }
+    .volunteering .left-box-animals {
+      height: 197px;
+      width: 65%; }
+      .volunteering .left-box-animals .dog-in-circle {
+        top: 6.5%;
+        right: 4%;
+        width: 172px;
+        height: 172px; }
+
+  .news .news-block .news-text {
+    max-width: 287px; }
+
+  .news .news-image img {
+    width: 79px;
+    height: 79px; }
+
+  .about-us .container {
+    max-width: 466px; }
+
+  .about-us .about-us-socials {
+    display: flex;
+    align-items: center; }
+    .about-us .about-us-socials .fz16 {
+      font-size: 16px; }
+
+  .thanks-text {
+    background: url("../img/thanks-paw.png") no-repeat right 0px;
+    font-size: 30px;
+    line-height: 36px; }
+
+  .thanks-for-help {
+    height: 360px; }
+
+  .shelter-text {
+    margin-top: 10%; } }
 
 /*# sourceMappingURL=styles.css.map */
