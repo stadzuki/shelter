@@ -21,17 +21,17 @@
                         <li><a class="fz16 col-gray-2" href="#">Контакты</a></li>
                     </div>
                     <div class="nav-header nav-socials">
-                        <li><a href="#"><img src="img/vk-icon.svg" alt="vkontakte"></a></li>
-                        <li><a href="#"><img src="img/instagram-icon.svg" alt="instagram"></a></li>
+                        <li class="social-orange"><a href="#"><img src="img/vk-icon.svg" alt="vkontakte" width="30" height="18"></a></li>
+                        <li class="social-orange"><a href="#"><img src="img/instagram-icon.svg" alt="instagram" width="30"></a></li>
                     </div>
                 </ul>
             </nav>
             <div class="burger-menu">
-                <!-- <nav class="burger-nav"></nav> -->
-                <div class="burger-btn"></div>
+                <div class="burger-btn "></div>
+                <div class="close disable"><img src="img/close.svg" alt="close burger"></div>
                 <ul class="burger-list">
-                    <li><a href="#"><img src="img/vk-icon.svg" alt="vkontakte"></a></li>
-                    <li><a href="#"><img src="img/instagram-icon.svg" alt="instagram"></a></li>
+                    <li class="social-orange"><a href="#"><img src="img/vk-icon.svg" alt="vkontakte"></a></li>
+                    <li class="social-orange"><a href="#"><img src="img/instagram-icon.svg" alt="instagram"></a></li>
                 </ul>
             </div>
             <article class="header-main-text">
@@ -117,7 +117,7 @@
                     <div class="animals-slide">
                         <div class="slide-overlay"></div>
                         <div class="slide-header">
-                            <img src="img/lynatic.png" alt="pet image" width="335" height="356">
+                            <div class="animal-photo"><img src="img/lynatic.png" alt="pet image"/></div>
                             <p class="pet-name fz22 col-gray-2">Блэки</p>
                         </div>
                         <div class="slide-about-pet fz14">
@@ -129,7 +129,7 @@
                     <div class="animals-slide">
                         <div class="slide-overlay active"></div>
                         <div class="slide-header">
-                            <img src="img/monik.png" alt="pet image" width="335" height="356">
+                            <div class="animal-photo"><img src="img/monik.png" alt="pet image"/></div>
                             <p class="pet-name fz22 col-gray-2">Моник</p>
                         </div>
                         <div class="slide-about-pet fz14">
@@ -141,7 +141,7 @@
                     <div class="animals-slide">
                         <div class="slide-overlay"></div>
                         <div class="slide-header">
-                            <img src="img/gerda.png" alt="pet image" width="335" height="356">
+                            <div class="animal-photo"><img src="img/gerda.png" alt="pet image"/></div>
                             <p class="pet-name fz22 col-gray-2">Саманта</p>
                         </div>
                         <div class="slide-about-pet fz14">
@@ -162,8 +162,8 @@
                 <div class="care-footer">
                     <p class="fz18 col-gray-2">Помочь быстрее пристроить хвостиков можно путем размещения наших постов у себя в соц сетях. Переходите на наши странички.</p>
                     <ul class="care-socials">
-                        <li><a href="#"><img src="img/vk-white.png" alt="vkontakte"></a></li>
-                        <li><a href="#"><img src="img/insta-white.png" alt="instagram"></a></li>
+                        <li class="social-white"><a href="#"><img src="img/vk-icon-orange.svg" alt="vkontakte"></a></li>
+                        <li class="social-white"><a href="#"><img src="img/instagram-icon-orange.svg" alt="instagram"></a></li>
                     </ul>
                 </div>
             </div>
@@ -319,8 +319,8 @@
             <div class="about-us-socials">
                 <p class="col-gray-4 fz16">Связаться с нами можно написав в соц. сетях.</p>
                 <ul class="social-list">
-                    <li><a href="#"><img src="img/vk-icon.svg" alt="vkontakte"></a></li>
-                    <li><a href="#"><img src="img/instagram-icon.svg" alt="instagram"></a></li>
+                    <li class="social-white"><a href="#"><img src="img/vk-icon-orange.svg" alt="vkontakte"></a></li>
+                    <li class="social-white"><a href="#"><img src="img/instagram-icon-orange.svg" alt="instagram"></a></li>
                 </ul>
             </div>
         </div>
@@ -345,5 +345,16 @@
         </ul>
         <div class="copyright">© 2020 БООЗЖ "СПАСИ ЖИЗНЬ"</div>
     </footer>
+    <div class="active-burger disable">
+        <div class="burger-header"></div>
+        <nav class="burger-nav">
+            <ul class="burger-nav-list">
+                <li><a href="#">Как помочь</a></li>
+                <li><a href="#">Подопечные животные</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
 </body>
 </html>

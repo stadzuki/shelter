@@ -33,6 +33,7 @@ html {
 }
 
 body {
+    position: relative;
     font-family: $font-regular;
     box-sizing: border-box;
     background-color: #f6f6f6;
@@ -44,12 +45,76 @@ ul, h1, h2, h3, body, p {
     margin: 0;
 }
 
-.burger-menu {
-    padding-top: 10px;
-    display: none;
-    justify-content: space-around;
-    align-items: center;
+.active-burger {
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 10%;
+    
+    .burger-header {    
+        background: #FFC41E;
+        width: 100%;
+        height: 7%;
+
+        
+    }
+
+    .burger-nav-list {
+        position: relative;
+        display: flex;  
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fff;
+        
+        li {
+            list-style: none;
+            padding-top: 35px;
+            padding-bottom: 25px;
+
+            a {
+                color: #242424;
+                font-size: 16px;
+                font-weight: 600;
+                font-family: $font-regular;
+                text-decoration: none;
+            }
+
+        }
+
+        li::after {
+            content: '';
+            left: 10%;
+            margin-top: 25px;
+            position: absolute;
+            display: block;
+            height: 1px;
+            width: 80%;
+            background: #FFC41E;
+        }
+
+        li:last-child {
+            &::after {
+                content: '';
+                display: none;
+            }
+        }
+    }
 }
+
+.burger-menu {
+    padding-top: 30px;   
+    padding-bottom: 20px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+
+    .close {
+        z-index: 2;
+    }
+}
+
 
 .burger-list {
     display: flex;
@@ -109,14 +174,14 @@ ul, h1, h2, h3, body, p {
     font-size: 20px;
 }
 
-.slide-overlay {
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 368px;
-    height: inherit;
-    position: absolute; 
-    display: block;
-    z-index: 2;
-}
+// .slide-overlay {
+//     background-color: rgba(255, 255, 255, 0.8);
+//     width: inherit;
+//     height: inherit;
+//     position: absolute; 
+//     display: block;
+//     z-index: 2;
+// }
 
 .article-set {
     max-width: 680px;
@@ -171,6 +236,69 @@ ul, h1, h2, h3, body, p {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+.social-white {
+    position: relative;
+    margin-right: 30px;
+    background: linear-gradient(145.67deg, #FFFFFF 15.39%, #E4E4E4 88.3%);
+    box-shadow: 3px 3px 13px #B1B1B1;
+    width: 49px;
+    height: 49px;
+    border-radius: 100%;
+    $border: 7px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -$border;
+        border-radius: inherit;
+        background: linear-gradient(144.1deg, #FFFFFF 12.45%, #FBFBFB 89.31%);
+        box-shadow: 7px 7px 16px rgba(213, 213, 213, 0.6), -6px -6px 8px #FFFFFF, inset 13px 22px 8px #F3F3F3;   
+    }
+
+    img {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    } 
+}
+
+.social-orange {
+    position: relative;
+    margin-right: 30px;
+    background: linear-gradient(150.26deg, #FFE28F 6.75%, #ECBD37 91.17%);
+    box-shadow: 3px 3px 13px #C18F00;
+    width: 49px;
+    height: 49px;
+    border-radius: 100%;
+    $border: 7px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -$border;
+        border-radius: inherit;
+        background: linear-gradient(144.1deg, #FFE193 12.45%, #FFC93F 89.31%);
+        box-shadow: 7px 7px 16px rgba(204, 151, 0, 0.6), -4px -4px 8px #FFDB7E, inset 13px 22px 8px #F1C74F;    
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
 }
 
 .to-help {
@@ -302,8 +430,8 @@ li {
 
 .header-bg-text {
     z-index: -2;
-    top: 50%;
-    left: -9.5%;
+    top: 4%;
+    left: 14%;
     position: absolute;
     color: #fff;
     opacity: 0.5;
@@ -323,8 +451,8 @@ li {
 
     .bg-text-2 {
         position: absolute;
-        left: 45%;
-        bottom: -26%;
+        left: 58%;
+        bottom: -50%;
     }
 }
 
@@ -343,8 +471,13 @@ li {
             padding-left: 30px;
 
             &:first-child {padding-left: 0;}
+            &.social-orange {
+                padding-left: 0; 
+                margin-right: 30px;
+            }
 
             a {text-decoration: none;} 
+
         }
 
         div.nav-header {
@@ -378,6 +511,7 @@ li {
         margin-top: 43px;
         max-width: 428px;
         margin-bottom: 45px;
+        line-height: 30px;
         font-family: $font-medium;
     }
 }
@@ -450,15 +584,15 @@ li {
                 padding: 0;
             }
 
-            .icon-support { background: transparent url('../img/i-support.svg') no-repeat center; background-size: contain;}
+            .icon-support { background: transparent url('../img/i-support.svg') no-repeat center; background-size: 80px;}
 
-            .icon-money-help { background: transparent url('../img/i-money-help.svg') no-repeat center; background-size: contain;}
+            .icon-money-help { background: transparent url('../img/i-money-help.svg') no-repeat center; background-size: 91px;}
 
-            .icon-medicine { background: transparent url('../img/i-medicine.svg') no-repeat center; background-size: contain;}
+            .icon-medicine { background: transparent url('../img/i-medicine.svg') no-repeat center; background-size: 93px;}
 
-            .icon-to-hospital { background: transparent url('../img/i-to-hospital.svg') no-repeat center; background-size: contain;}
+            .icon-to-hospital { background: transparent url('../img/i-to-hospital.svg') no-repeat center; background-size: 83px;}
 
-            .icon-care {background: transparent url('../img/i-care.svg') no-repeat center; background-size: contain;}
+            .icon-care {background: transparent url('../img/i-care.svg') no-repeat center; background-size: 63px 83px   ;}
 
             .help-icon {
                 background-color: transparent;
@@ -524,29 +658,40 @@ li {
 
     .animals-slider {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
 
         .animals-slide {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            position: relative;
             margin-right: 20px;
             margin-top: 20px;
-            padding: 20px 0;
             width: 368px;
-            height: 555px;
+            min-height: 559px;
+            height: auto;
             background-color: #FFFFFF;
             border: 1px solid #D6D6D6;
             border-radius: 5px;
+
+            .more-info {
+                position: absolute;
+                bottom: 15px;
+            }
 
             .slide-header {
                 position: relative;
                 font-family: $font-medium;
                 font-weight: 500;
                 text-align: center;
-                
+
+                .animal-photo {
+                    height: 100%;
+                    width: auto;
+                    margin-top: 16px;
+                    margin-left: 17px;
+                    margin-right: 16px;
+                }
+
                 .pet-name {
                     margin-top: 10px;
 
@@ -564,8 +709,9 @@ li {
             
             .slide-about-pet {
                 font-family: $font-regular;
-                margin: 0 15px;
-                font-weight: 500;        
+                margin: 15px 15px;
+                font-weight: 500;     
+                margin-bottom: 55px;   
             }
 
             .more-info {
@@ -854,6 +1000,7 @@ li {
     font-weight: bold;
     font-size: 64px;
     color: #FFFFFF;
+    line-height: 120%;
     top: 43%;
 }
 
@@ -894,6 +1041,10 @@ li {
     display: none;
 }
 
+.disable {
+    display: none;
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1269px) {
     .container {max-width: 804px;}
 
@@ -930,6 +1081,20 @@ li {
         .header-shelter-info {
             max-width: 300px;
         }
+
+        .header-bg-text .bg-text-1 {
+            font-size: 150px;
+            line-height: 80px;
+        }
+
+        .header-bg-text .bg-text-2 {
+            left: 45%;
+            bottom: -60%;
+        }
+
+        .header-bg-text {
+            left: 0%;
+        }
     }
 
     //About shelter
@@ -948,6 +1113,10 @@ li {
     }
 
     //care
+    .care-of-animals .animals-slider {
+        width: 1024px;
+    }
+
     .care-of-animals .care-text article {
         max-width: 275px;
     }
@@ -1028,6 +1197,21 @@ li {
 
         .header-shelter-info {
             max-width: 204px;
+             p {line-height: 19px;}
+        }
+
+        .header-bg-text .bg-text-1 {
+            font-size: 120px;
+            line-height: 60px;
+        }
+
+        .header-bg-text .bg-text-2 {
+            left: 45%;
+            bottom: -60%;
+        }
+
+        .header-bg-text {
+            left: 0%;
         }
     }
 
@@ -1070,6 +1254,10 @@ li {
     }
 
     //care
+    .care-of-animals .animals-slider {
+        width: 768px;
+    }
+
     .care-of-animals .care-text article {
         max-width: 190px;
     }
@@ -1175,6 +1363,7 @@ li {
         .header-bg-dog {
             width: 312px;
             height: 65%;
+            background-size: cover;
         }
 
         .header-bg-cat {
@@ -1194,10 +1383,27 @@ li {
             text-align: center;
             max-width: 381px;
 
+            p {line-height: 19px;}
+
             .info-text {
                 margin-bottom: 20px;
                 margin-top: 0;
             }
+        }
+
+        .header-bg-text .bg-text-1 {
+            font-size: 120px;
+            line-height: 60px;
+        }
+
+        .header-bg-text .bg-text-2 {
+            left: 45%;
+            bottom: -60%;
+        }
+
+        .header-bg-text {
+            left: 0%;
+            top: 2.5%;
         }
     }
 
@@ -1266,7 +1472,10 @@ li {
     .how-to-help .help-list {justify-content: center;}
 
     //care
-    
+    .care-of-animals .animals-slider {
+        width: 640px;
+    }
+
     .care-of-animals .care-text article {
         max-width: 382px;
     }
@@ -1449,6 +1658,8 @@ li {
         .header-bg-dog {
             width: 225px;
             height: 65%;
+            background-position-x: -80px;
+            background-size: cover;
         }
 
         .header-bg-cat {
@@ -1468,10 +1679,28 @@ li {
             text-align: center;
             max-width: 300px;
 
+            p {line-height: 19px;}
+
             .info-text {
                 margin-bottom: 20px;
                 margin-top: 0;
             }
+        }
+
+        .header-bg-text .bg-text-1 {
+            font-size: 60px;
+            line-height: 30px;
+        }
+
+        .header-bg-text .bg-text-2 {
+            left: 15%;
+            bottom: -120%;
+            font-size: 60px;
+        }
+
+        .header-bg-text {
+            left: 0%;
+            top: 2.5%;
         }
     }
 
@@ -1537,6 +1766,10 @@ li {
     }
     
     //care
+    .care-of-animals .animals-slider {
+        width: 360px;
+    }
+
     .care-of-animals .care-text article {
         max-width: 300px;
     }
@@ -1692,3 +1925,8 @@ li {
         margin-top: 10%; 
     }
 }
+
+// @media screen and (min-width: 1024px) {
+//     overflow: hidden;
+//     width: 1024px;
+// }
