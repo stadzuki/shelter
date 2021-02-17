@@ -71,6 +71,8 @@ ul, h1, h2, h3, body, p {
   display: none;
   justify-content: space-between;
   align-items: center; }
+  .burger-menu .burger-btn {
+    cursor: pointer; }
   .burger-menu .close {
     z-index: 2; }
 
@@ -740,24 +742,38 @@ li {
   top: 43%; }
 
 .main-footer {
-  padding: 40px 0px 16px; }
+  padding: 40px 0px 16px;
+  position: relative; }
   .main-footer .settings-block {
     flex-wrap: wrap; }
   .main-footer .footer-list {
     display: flex;
-    margin: 0px 0px 24px; }
-    .main-footer .footer-list div {
-      display: flex; }
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; }
+    .main-footer .footer-list .left-list {
+      display: flex;
+      flex-wrap: wrap; }
+      .main-footer .footer-list .left-list li {
+        padding: 10px 40px; }
     .main-footer .footer-list .right-list {
-      margin-left: 120px; }
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 2%; }
     .main-footer .footer-list li {
       list-style: none;
       padding-left: 40px; }
+      .main-footer .footer-list li:nth-child(5) {
+        padding-right: 100px; }
   .main-footer .copyright {
     font-family: "Gilroy Regular";
     color: #B3B3B3;
     font-weight: normal;
-    font-size: 12px; }
+    font-size: 12px;
+    position: absolute;
+    bottom: 12%;
+    right: 11%;
+    align-self: flex-end; }
 
 .active {
   display: none; }
@@ -974,6 +990,12 @@ li {
     background: url("../img/thanks-paw.png") no-repeat right 10px;
     font-size: 36px; } }
 @media screen and (min-width: 640px) and (max-width: 767px) {
+  .burger-btn {
+    margin-left: 16%; }
+
+  .burger-list {
+    margin-right: 2%; }
+
   .fz72 {
     font-size: 30px; }
 
@@ -1101,6 +1123,9 @@ li {
   .care-of-animals .care-footer p {
     max-width: 382px; }
 
+  .care-of-animals .slider-controll .slider-arrow {
+    display: none; }
+
   .care-of-animals .care-text {
     align-items: center;
     flex-direction: column; }
@@ -1195,6 +1220,31 @@ li {
   .shelter-text {
     margin-top: 10%; } }
 @media screen and (min-width: 360px) and (max-width: 639px) {
+  .social-white img {
+    width: 18px; }
+
+  .social-white {
+    width: 32px;
+    height: 32px; }
+
+  .social-orange img {
+    width: 18px; }
+
+  .social-orange {
+    width: 32px;
+    height: 32px; }
+
+  .block-icons::before {
+    width: 25%; }
+  .block-icons::after {
+    width: 25%; }
+
+  .burger-btn {
+    margin-left: 9%; }
+
+  .article-set {
+    max-width: 300px; }
+
   .fz72 {
     font-size: 30px; }
 
@@ -1315,11 +1365,22 @@ li {
   .care-of-animals .animals-slider {
     width: 360px; }
 
+  .care-of-animals .slider-controll .slider-arrow {
+    display: none; }
+
+  .care-of-animals .animals-slider .animals-slide {
+    width: 300px;
+    min-height: 495px;
+    margin-right: 5px; }
+    .care-of-animals .animals-slider .animals-slide .slide-header .animal-photo img {
+      width: 272px; }
+
   .care-of-animals .care-text article {
     max-width: 300px; }
 
   .care-of-animals .care-footer p {
-    max-width: 300px; }
+    max-width: 300px;
+    margin-bottom: 15px; }
 
   .care-of-animals .care-text {
     align-items: center;
@@ -1341,7 +1402,7 @@ li {
     padding-top: 35px; }
 
   .financial-support .finance-title {
-    max-width: 358px; }
+    max-width: 300px; }
 
   .financial-support .finance-text .finance-block {
     white-space: normal;
@@ -1384,7 +1445,7 @@ li {
       margin-left: 0px;
       align-self: center; }
       .volunteering .volunteering-content article p {
-        max-width: 382px;
+        max-width: 300px;
         margin-bottom: 20px; }
     .volunteering .left-box-animals {
       height: 197px;
@@ -1396,7 +1457,7 @@ li {
         height: 172px; }
 
   .news .news-block .news-text {
-    max-width: 287px; }
+    max-width: 205px; }
 
   .news .news-image img {
     width: 79px;
@@ -1409,17 +1470,38 @@ li {
     display: flex;
     align-items: center; }
     .about-us .about-us-socials .fz16 {
-      font-size: 16px; }
+      font-size: 16px;
+      max-width: 211px; }
+
+  .about-us .about-us-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+  .about-us .about-us-text {
+    max-width: 300px; }
+
+  .about-us-contacts {
+    margin-left: 5%;
+    max-width: 300px; }
 
   .thanks-text {
     background: url("../img/thanks-paw.png") no-repeat right 0px;
     font-size: 30px;
     line-height: 36px; }
 
+  .thanks-for-help .text-left {
+    width: 80%; }
+
   .thanks-for-help {
     height: 360px; }
 
   .shelter-text {
-    margin-top: 10%; } }
+    margin-top: 10%; }
+
+  .main-footer .copyright {
+    position: static;
+    align-self: center;
+    margin-top: 25px; } }
 
 /*# sourceMappingURL=styles.css.map */

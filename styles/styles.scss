@@ -110,6 +110,10 @@ ul, h1, h2, h3, body, p {
     justify-content: space-between;
     align-items: center;
 
+    .burger-btn {
+        cursor: pointer;
+    }
+
     .close {
         z-index: 2;
     }
@@ -1006,6 +1010,7 @@ li {
 
 .main-footer {
     padding: 40px 0px 16px;
+    position: relative;
 
     .settings-block {
         flex-wrap: wrap;
@@ -1013,19 +1018,31 @@ li {
 
     .footer-list {
         display: flex;
-        margin: 0px 0px 24px;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
 
-        div {
+        .left-list {
             display: flex;
+            flex-wrap: wrap;
+
+            li {
+                padding: 10px 40px;
+            }
         }
 
         .right-list {
-            margin-left: 120px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 2%;
         }
 
         li {
             list-style: none;
             padding-left: 40px;
+            &:nth-child(5) {
+                padding-right: 100px;
+            }
         }
     }
 
@@ -1034,6 +1051,10 @@ li {
         color: #B3B3B3;
         font-weight: normal;
         font-size: 12px;
+        position: absolute;
+        bottom: 12%;
+        right: 11%;
+        align-self: flex-end;
     }
 }
 
@@ -1329,6 +1350,9 @@ li {
 }
 
 @media screen and (min-width: 640px) and (max-width: 767px) {
+    .burger-btn {margin-left: 16%;}
+    .burger-list {margin-right: 2%;}
+
     .fz72 {font-size: 30px;}
 
     .fz16 {font-size: 14px;}
@@ -1484,6 +1508,10 @@ li {
         max-width: 382px;
     }  
 
+    .care-of-animals .slider-controll .slider-arrow {
+        display: none;
+    }
+
     .care-of-animals .care-text {
         align-items: center;
         flex-direction: column;
@@ -1624,6 +1652,37 @@ li {
 }
 
 @media screen and (min-width: 360px) and (max-width: 639px) {
+
+    .social-white img {
+        width: 18px;
+    }
+
+    .social-white {
+        width: 32px;
+        height: 32px;
+    }
+
+    .social-orange img {
+        width: 18px;
+    }
+
+    .social-orange {
+        width: 32px;
+        height: 32px;
+    }
+
+    .block-icons {
+        &::before {
+            width: 25%;
+        }
+
+        &::after {width: 25%;}
+    }
+
+    .burger-btn {margin-left: 9%;}
+
+    .article-set { max-width: 300px;}
+
     .fz72 {font-size: 30px;}
 
     .fz16 {font-size: 14px;}
@@ -1770,12 +1829,27 @@ li {
         width: 360px;
     }
 
+    .care-of-animals .slider-controll .slider-arrow {
+        display: none;
+    }
+
+    .care-of-animals .animals-slider .animals-slide {
+        width: 300px;
+        min-height: 495px;
+        margin-right: 5px;
+
+        .slide-header .animal-photo img {
+            width: 272px;
+        }
+    }
+
     .care-of-animals .care-text article {
         max-width: 300px;
     }
     
     .care-of-animals .care-footer p {
         max-width: 300px;
+        margin-bottom: 15px;
     }  
 
     .care-of-animals .care-text {
@@ -1807,7 +1881,7 @@ li {
     }
 
     .financial-support .finance-title {
-        max-width: 358px;
+        max-width: 300px;
     }
 
     .financial-support .finance-text .finance-block {
@@ -1870,7 +1944,7 @@ li {
             align-self: center;
     
             p {
-                max-width: 382px;
+                max-width: 300px;
                 margin-bottom: 20px;
             }
             
@@ -1891,7 +1965,7 @@ li {
 
     //news
     .news .news-block .news-text {
-        max-width: 287px;
+        max-width: 205px;
     }
 
     .news .news-image img{
@@ -1906,9 +1980,25 @@ li {
     .about-us .about-us-socials {
         display: flex;
         align-items: center;
-        .fz16 {font-size: 16px;}
+        .fz16 {font-size: 16px; max-width: 211px;}
         
     }
+
+    .about-us .about-us-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us .about-us-text {
+        max-width: 300px;
+    }
+
+    .about-us-contacts {
+        margin-left: 5%;
+        max-width: 300px;
+    }
+    
 
     //thanks
     .thanks-text {
@@ -1917,12 +2007,22 @@ li {
         line-height: 36px;
     }
 
+    .thanks-for-help .text-left {
+        width: 80%;
+    }
+
     .thanks-for-help {
         height: 360px;
     }
 
     .shelter-text {
         margin-top: 10%; 
+    }
+
+    .main-footer .copyright {
+        position: static;
+        align-self: center;
+        margin-top: 25px;
     }
 }
 
