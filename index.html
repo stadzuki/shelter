@@ -356,5 +356,35 @@
             </ul>
         </nav>
     </div>
+    <div class="modal-overlay"></div>
+    <div class="modal">
+        <div class="modal__header">
+            <div class="modal__title">
+                <div class="modal_title_text">Забрать на передержку</div>
+                <div class="modal__close"></div>
+            </div>
+            <div class="modal__descriptions">Оставьте информацию о себе. Мы позвоним вам и договоримся, когда вы сможете забрать себе питомца на передержку.</div>
+        </div>
+        <div class="modal__fields">
+            <form method="GET">
+                <p class="input-name">
+                    <span class="input-name__title">Фамилия и имя</span>
+                    <input type="text" name="login" placeholder="Введите Ваше имя и фамилию">
+                </p>
+                <p class="input-phone">
+                    <span class="input-name__title">Номер телефона</span>
+                    <input type="text" name="phone" placeholder="Номер телефона">
+                    <span class="input-name__description">Обязательное поле для заполнения</span>    
+                </p>
+                <textarea name="comments" cols="30" rows="10" placeholder="Опишите, на какой срок вы смогли бы взять питомца на передержку"></textarea>
+            </form>
+        </div>
+        <div class="modal__contacts">Если у вас есть вопросы, можете позвонить нам:<br>+375 (33) 6237879  Лена<br>+375 (29) 7877791  Ольга<br>+375 (29) 5837015  Рита</div>
+        <div class="modal__descriptions">Наши волонтеры будут активно искать будущий дом хвостику, пока вы помогаете нам с передержкой. Спасибо за помощь!</div>
+        <div class="modal_btns">
+            <a href="#" id="modal-send">Отправить</a>
+            <a href="#" id="modal_cancel">Отмена</a>
+        </div>
+    </div>
 </body>
 </html>
