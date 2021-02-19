@@ -56,7 +56,118 @@ ul, h1, h2, h3, body, p {
 .modal {
     position: absolute;
     top: 1%;
+    left: 30%;
 
+    .modal__content {
+        padding: 30px 40px;
+        max-width: 525px;
+        height: auto;
+        background-color: #fff;
+        box-shadow: 0px 0px 22px rgba(161, 161, 161, 0.25);
+        border-radius: 5px;
+    }
+
+    .modal__header {
+        .modal__title {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                bottom: 0;
+                background-color: #eebf3a;
+            }
+
+            .modal__title__text {
+                color: #b6b6b6;
+                font-size: 28px;
+                line-height: 24px;
+                font-weight: 600;
+                font-family: $font-medium;
+            }
+            
+            .modal__close {
+                cursor: pointer;
+                position: relative;
+                height: 2px;
+                width: 20px;
+                background: #81869C;
+                transform: rotate(-45deg);
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    width: 20px;
+                    background: #81869C;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        .modal__descriptions {
+            margin-top: 20px;
+            font-weight: normal;
+            font-family: $font-regular;
+            font-size: 16px;
+            line-height: 23px;
+            color: #6B6B6B;
+            max-width: 368px;
+        }
+    }
+
+    .modal__fields {
+        margin-top: 30px;
+
+        .input {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+
+            label {
+                font-size: 14px;
+                line-height: 20px;
+                font-family: $font-medium;
+                font-weight: 500;
+                color: #474747;
+                margin-bottom: 3px;
+            }
+
+            input {
+                background: #FFFFFF;
+                border: 1px solid #D6D6D6;
+                height: 40px;
+                border-radius: 2px;
+                padding-left: 16px;
+
+                &::placeholder {
+                    font-size: 16px;
+                    font-family: $font-medium;
+                    font-weight: 400;
+                    color: #6B6B6B;
+                }
+            }
+
+            .input-name__description {
+                color: #b3b3b3;
+                font-size: 14px;
+                font-family: $font-regular;
+            }
+        }
+
+        .input-comments {
+            max-width: 445px;
+            min-width: 445px;
+            max-height: 76px;
+            min-height: 76px;
+        }
+    }
 }
 
 .active-burger {
