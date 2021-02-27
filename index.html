@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="public/styles/styles.css">
+    <script src="./dist/main.js" defer></script>
     <title>Приют</title>
 </head>
 <body>
@@ -13,25 +14,25 @@
             <nav class="main-nav">
                 <ul>
                     <div class="nav-header nav-services">
-                        <li><a class="fz16 col-gray-2" href="#">Как помочь</a></li>
-                        <li><a class="fz16 col-gray-2" href="#">Подопечные животные</a></li>
+                        <li><a class="fz16 col-gray-2" href="#how-help">Как помочь</a></li>
+                        <li><a class="fz16 col-gray-2" href="#our-animals">Подопечные животные</a></li>
                     </div>
                     <div class="nav-header nav-company-info">
-                        <li><a class="fz16 col-gray-2" href="#">О нас</a></li>
-                        <li><a class="fz16 col-gray-2" href="#">Контакты</a></li>
+                        <li><a class="fz16 col-gray-2" href="#about-us">О нас</a></li>
+                        <li><a class="fz16 col-gray-2" href="#contacts">Контакты</a></li>
                     </div>
                     <div class="nav-header nav-socials">
-                        <li class="social-orange"><a href="#"><img src="img/vk-icon.svg" alt="vkontakte" width="30" height="18"></a></li>
-                        <li class="social-orange"><a href="#"><img src="img/instagram-icon.svg" alt="instagram" width="30"></a></li>
+                        <li class="social-orange"><a href="https://vk.com" target="_blank"><img src="public/img/vk-icon.svg" alt="vkontakte" width="30" height="18"></a></li>
+                        <li class="social-orange"><a href="https://instagram.com" target="_blank"><img src="public/img/instagram-icon.svg" alt="instagram" width="30"></a></li>
                     </div>
                 </ul>
             </nav>
             <div class="burger-menu">
                 <div class="burger-btn "></div>
-                <div class="close disable"><img src="img/close.svg" alt="close burger"></div>
+                <div class="close disable"><img src="public/img/close.svg" alt="close burger"></div>
                 <ul class="burger-list">
-                    <li class="social-orange"><a href="#"><img src="img/vk-icon.svg" alt="vkontakte"></a></li>
-                    <li class="social-orange"><a href="#"><img src="img/instagram-icon.svg" alt="instagram"></a></li>
+                    <li class="social-orange"><a href="https://vk.com" target="_blank"><img src="public/img/vk-icon.svg" alt="vkontakte"></a></li>
+                    <li class="social-orange"><a href="https://instagram.com" target="_blank"><img src="public/img/instagram-icon.svg" alt="instagram"></a></li>
                 </ul>
             </div>
             <article class="header-main-text">
@@ -43,7 +44,7 @@
             </article>
             <div class="header-shelter-info">
                 <p class="info-text fz24 col-orange">У животных, находящихся в пункте отлова и временного содержания бродячих животных, есть всего несколько дней до усыпления...</p>
-                <a class="to-help" href="#">Хочу помочь</a>
+                <a id="want-to-help-btn" class="to-help" href="#how-hel" >Хочу помочь</a>
             </div>
             <div class="header-bg-dog"></div>
             <div class="header-bg-cat"></div>
@@ -58,13 +59,13 @@
             <div class="dog-in-circle"></div>
             <div class="cat-in-circle"></div>
         </div>
-        <div class="shelter-text">
+        <div class="shelter-text" >
             <h2 class="fz28 col-orange">Тут большие добрые сердца помогают жить маленьким сердечкам</h2>
             <p class="fz16 col-gray-2">Ежедневно в пункт временного содержания, путём отлова, попадают безнадзорные собаки и коты. По закону, у животных находящихся в САХе есть всего лишь несколько дней, чтобы найти прежнего или обрести нового хозяина. В противном случае невостребованных животных ждёт УСЫПЛЕНИЕ! Здесь вы сможете найти своего как потерявшегося, так и нового верного друга!</p>
             <p class="fz16 col-gray-2">Если нет возможности забрать хвостика, вы можете помочь нам финансово или другой материальной помощью. Еще нам всегда нужны добрые и отзывчивые люди - волонтеры, без вас очень трудно!</p>
         </div>
     </section>
-    <section class="how-to-help">
+    <section class="how-to-help" id="how-help">
         <div class="container">
             <h2 class="how-to-help-title fz28 col-gray-2">Как помочь?</h2>
             <ul class="help-list">
@@ -108,7 +109,7 @@
                     <p class="fz16 col-gray-2">Когда животных ждет скорое усыпление, очень важно найти ему дом. Но пока дом и новые или старые хозяева разыскиваются, хвостику нужно где-то жить. Вы можете забрать к себе домой животных на время. Волонтеры, в свою очередь, обязательно помогут с поиском нового дома.</p>
                 </article>
             </div>
-            <div class="our-animals">
+            <div class="our-animals" id="our-animals">
                 <div class="our-animals-text">
                     <h3 class="our-animals-title fz28 col-gray-2">Наши подопечные</h3>
                     <a href="#" class="our-animals-watch-all content-link">Посмотреть всех (<span class="count-our-animals">157</span>)</a>
@@ -117,7 +118,7 @@
                     <div class="animals-slide">
                         <div class="slide-overlay"></div>
                         <div class="slide-header">
-                            <div class="animal-photo"><img src="img/lynatic.png" alt="pet image"/></div>
+                            <div class="animal-photo"><img src="public/img/lynatic.png" alt="pet image"/></div>
                             <p class="pet-name fz22 col-gray-2">Блэки</p>
                         </div>
                         <div class="slide-about-pet fz14">
@@ -129,7 +130,7 @@
                     <div class="animals-slide">
                         <div class="slide-overlay active"></div>
                         <div class="slide-header">
-                            <div class="animal-photo"><img src="img/monik.png" alt="pet image"/></div>
+                            <div class="animal-photo"><img src="public/img/monik.png" alt="pet image"/></div>
                             <p class="pet-name fz22 col-gray-2">Моник</p>
                         </div>
                         <div class="slide-about-pet fz14">
@@ -141,7 +142,7 @@
                     <div class="animals-slide">
                         <div class="slide-overlay"></div>
                         <div class="slide-header">
-                            <div class="animal-photo"><img src="img/gerda.png" alt="pet image"/></div>
+                            <div class="animal-photo"><img src="public/img/gerda.png" alt="pet image"/></div>
                             <p class="pet-name fz22 col-gray-2">Саманта</p>
                         </div>
                         <div class="slide-about-pet fz14">
@@ -152,18 +153,18 @@
                     </div>
                 </div>
                 <div class="slider-controll">
-                    <div class="slider-arrow slider-left-arrow"><img src="img/arrow-left.png" alt="Arrow Left"></div>
-                    <div class="slider-arrow slider-right-arrow"><img src="img/arrow-right.png" alt="Arrow Right"></div>
+                    <div class="slider-arrow slider-left-arrow"><img src="public/img/arrow-left.png" alt="Arrow Left"></div>
+                    <div class="slider-arrow slider-right-arrow"><img src="public/img/arrow-right.png" alt="Arrow Right"></div>
                     <div class="slider-buttons">
-                        <a id="take-to-home" class="to-help" href="#">Забрать домой</a>
-                        <a id="take-on-time" class="gray-btn fz20 col-gray-2" href="#">Забрать на передержку</a>
+                        <a id="take-to-home-btn" class="to-help modal-btn" href="#">Забрать домой</a>
+                        <a id="take-on-time-btn" class="gray-btn modal-btn fz20 col-gray-2" href="#">Забрать на передержку</a>
                     </div>
                 </div>
                 <div class="care-footer">
                     <p class="fz18 col-gray-2">Помочь быстрее пристроить хвостиков можно путем размещения наших постов у себя в соц сетях. Переходите на наши странички.</p>
                     <ul class="care-socials">
-                        <li class="social-white"><a href="#"><img src="img/vk-icon-orange.svg" alt="vkontakte"></a></li>
-                        <li class="social-white"><a href="#"><img src="img/instagram-icon-orange.svg" alt="instagram"></a></li>
+                        <li class="social-white"><a href="https://vk.com" target="_blank"><img src="public/img/vk-icon-orange.svg" alt="vkontakte"></a></li>
+                        <li class="social-white"><a href="https://instagram.com" target="_blank"><img src="public/img/instagram-icon-orange.svg" alt="instagram"></a></li>
                     </ul>
                 </div>
             </div>
@@ -187,7 +188,7 @@
                     <li>БИК: ALFABY2X</li>
                 </ul>
                 <div class="finance-description">
-                    <a id="finance-fast-pay" class="fz20 to-help somep">Быстрый платеж</a>
+                    <a id="finance-fast-pay-btn" class="fz20 to-help somep modal-btn">Быстрый платеж</a>
                 </div>
             </div>
             <div class="finance-block donate-box">
@@ -246,7 +247,7 @@
                     </ul>
                 </article>
             </div>
-            <a id="where-send" class="content-link" href="#">Кому и куда передать?</a>    
+            <a id="where-send" class="content-link modal-btn" href="#">Кому и куда передать?</a>    
         </div>
         
     </section>
@@ -259,7 +260,7 @@
                 </header>
                 <p class="fz16 col-gray-2">Важной помощью будет транспортировка. Необходимо отвозить животных в ветеринарную клинику в сопровождении нашего волонтера или привозить еду. Если у вас есть автомобиль, немного свободного времени и доброе сердце - будем вам рады.</p>
                 <footer>
-                   <a href="#" class="send-request to-help">Оставить заявку</a> 
+                   <a href="#" class="send-request to-help modal-btn" id="autohelp-btn">Оставить заявку</a> 
                 </footer>
             </article>
         </div>
@@ -276,7 +277,7 @@
                 </header>
                 <p class="fz16 col-gray-2">Катастрофически не хватает добрых людей, которые готовы поделиться своим временем и окружить заботой животных. Много опыта не нужно, все расскажем и поможем! Если Вы располагаете несколькими часами свободного времени, проведите его с пользой! Главное условие - это Ваше совершеннолетие и любовь к животным! Часто животным не хватает обычных прогулок и игры, они сидят в клетках и грустят.</p>
                 <footer>
-                    <a href="#" class="send-request to-help">Оставить заявку</a> 
+                    <a href="#" class="send-request to-help modal-btn" id="volunteering-btn">Оставить заявку</a> 
                  </footer>
             </article>
         </div>
@@ -287,13 +288,13 @@
             <div class="news-blocks">
                 <section class="news-block news-01">
                     <div class="news-image">
-                        <img src="img/animal-news-1.png" alt="animal-photo-1">
+                        <img src="public/img/animal-news-1.png" alt="animal-photo-1">
                     </div>
                     <div class="news-text fz16 col-gray-2">Срочно необходимо забрать собаку (мальчик) на передержку или насовсем. Послезавтра его ждет усыпление. С кормом и доставкой поможем. В данный момент находится в вольера САХа. Контактный телефон + 37529 58930557 Спасите жизнь хвостику.</div>
                 </section>
                 <section class="news-block news-02">
                     <div class="news-image">
-                        <img src="img/animal-news-2.png" alt="animal-photo-2">
+                        <img src="public/img/animal-news-2.png" alt="animal-photo-2">
                     </div>
                     <div class="news-text fz16 col-gray-2">Найдены бедомные щенки по улице Горького д.56. Сегодня будут перевезены в вольеры САХа. Если у вас есть возможность взять на передержку или пристроить малышей - будем вам очень благодарны.</div>
                 </section>
@@ -301,13 +302,13 @@
             <a id="all-news" class="content-link" href="#">Показать все новости</a>
         </div>
     </section>
-    <section class="about-us settings-block col-gray-2">
+    <section class="about-us settings-block col-gray-2" id="about-us">
         <div class="container">
             <div class="about-us-description">
                 <h2 class="about-us-title fz28">О нас</h2>
                 <p class="about-us-text fz18 ">Мы - благотворительное общественное объединение защиты животных «СПАСИ ЖИЗНЬ». Цель нашей деятельности: помощь бездомным животным, оказавшимся в Пункте отлова и временного содержания безнадзорных животных г.Гродно.</p>
             </div>
-            <div class="about-us-contacts">
+            <div class="about-us-contacts" id="contacts">
                 <h3 class="contacts-title">Контакты</h3>
                 <div class="contacts-list-title">Если Вы хотите приютить одного из этих четвероногих или оказать какую-либо помощь, звоните волонтёрам:</div>
                 <ul class="contacts-list">
@@ -319,8 +320,8 @@
             <div class="about-us-socials">
                 <p class="col-gray-4 fz16">Связаться с нами можно написав в соц. сетях.</p>
                 <ul class="social-list">
-                    <li class="social-white"><a href="#"><img src="img/vk-icon-orange.svg" alt="vkontakte"></a></li>
-                    <li class="social-white"><a href="#"><img src="img/instagram-icon-orange.svg" alt="instagram"></a></li>
+                    <li class="social-white"><a href="https://vk.com" target="_blank"><img src="public/img/vk-icon-orange.svg" alt="vkontakte"></a></li>
+                    <li class="social-white"><a href="https://instagram.com" target="_blank"><img src="public/img/instagram-icon-orange.svg" alt="instagram"></a></li>
                 </ul>
             </div>
         </div>
@@ -356,38 +357,40 @@
             </ul>
         </nav>
     </div>
-    <div class="modal-overlay"></div>
-    <div class="modal">
-        <div class="modal__content">
-            <div class="modal__header">
-                <div class="modal__title">
-                    <div class="modal__title__text">Забрать на передержку</div>
-                    <div class="modal__close"></div>
+    <div class="modal__container disable">
+        <div class="modal-overlay"></div>
+        <div class="modal">
+            <div class="modal__content">
+                <!-- <div class="modal__header">
+                    <div class="modal__title">
+                        <div class="modal__title__text">Забрать на передержку</div>
+                        <div class="modal__close"></div>
+                    </div>
+                    <div class="modal__descriptions">Оставьте информацию о себе. Мы позвоним вам и договоримся, когда вы сможете забрать себе питомца на передержку.</div>
                 </div>
-                <div class="modal__descriptions">Оставьте информацию о себе. Мы позвоним вам и договоримся, когда вы сможете забрать себе питомца на передержку.</div>
-            </div>
-            <div class="modal__fields">
-                <form method="GET">
-                    <p class="input input-name">
-                        <label class="input-name__title">Фамилия и имя</label>
-                        <input type="text" name="login" placeholder="Введите Ваше имя и фамилию">
-                    </p>
-                    <p class="input input-phone">
-                        <label class="input-name__title">Номер телефона</label>
-                        <input type="text" name="phone" placeholder="Номер телефона">
-                        <span class="input-name__description">Обязательное поле для заполнения</span>    
-                    </p>
-                    <p class="input input-comments">
-                        <label for="area-comments">Замечания</label>
-                        <textarea name="comments" id="area-comments" cols="30" rows="10" placeholder="Опишите, на какой срок вы смогли бы взять питомца на передержку"></textarea>
-                    </p>
-                </form>
-            </div>
-            <div class="modal__contacts">Если у вас есть вопросы, можете позвонить нам:<br>+375 (33) 6237879  Лена<br>+375 (29) 7877791  Ольга<br>+375 (29) 5837015  Рита</div>
-            <div class="modal__descriptions">Наши волонтеры будут активно искать будущий дом хвостику, пока вы помогаете нам с передержкой. Спасибо за помощь!</div>
-            <div class="modal_btns">
-                <a href="#" id="modal-send">Отправить</a>
-                <a href="#" id="modal_cancel">Отмена</a>
+                <div class="modal__fields">
+                    <form method="GET">
+                        <p class="input input-name">
+                            <label class="input-name__title">Фамилия и имя</label>
+                            <input type="text" name="login" placeholder="Введите Ваше имя и фамилию">
+                        </p>
+                        <p class="input input-phone">
+                            <label class="input-name__title">Номер телефона</label>
+                            <input type="text" name="phone" placeholder="Номер телефона">
+                            <span class="input-name__description">Обязательное поле для заполнения</span>    
+                        </p>
+                        <p class="input input-comments">
+                            <label for="area-comments">Замечания</label>
+                            <textarea name="comments" id="area-comments" cols="30" rows="10" placeholder="Опишите, на какой срок вы смогли бы взять питомца на передержку"></textarea>
+                        </p>
+                    </form>
+                </div>
+                <div class="modal__contacts">Если у вас есть вопросы, можете позвонить нам:<br>+375 (33) 6237879  Лена<br>+375 (29) 7877791  Ольга<br>+375 (29) 5837015  Рита</div>
+                <div class="modal__descriptions">Наши волонтеры будут активно искать будущий дом хвостику, пока вы помогаете нам с передержкой. Спасибо за помощь!</div>
+                <div class="modal__btns">
+                    <a href="#" id="modal-send">Отправить</a>
+                    <a href="#" id="modal-cancel">Отмена</a>
+                </div> -->
             </div>
         </div>
     </div>
